@@ -35,7 +35,7 @@ export default function Ziadost() {
     amount: 5000,
     period: 8
   });
-  const [mounthAmount, setMounthAmount] = useState(95.48);
+  const [mounthAmount, setMounthAmount] = useState(495.99);
   const handleChange = e => {
     console.log(e.target)
     const { name, value } = e.target;
