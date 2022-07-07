@@ -103,7 +103,7 @@ export default function Ziadost() {
             <div className="info">
         Priemerná hodnota RPNM od 9,12%
         </div>
-        <h2> Mesačná splátka: {mounthAmount}€</h2>
+        <h1> Mesačná splátka: {mounthAmount}€</h1>
         <div className="info2">
             Výška splátky je len orientačná bude vypočítaná na základe Vašich individuálnych podmienok
         </div>

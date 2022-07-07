@@ -27,7 +27,6 @@ function PMT(ir, np, pv, fv, type) {
    if (type === 1)
        pmt /= (1 + ir);
 
-
    return pmt;}
 
 export default function Ziadost() {
@@ -37,26 +36,18 @@ export default function Ziadost() {
   });
   const [mounthAmount, setMounthAmount] = useState();
   const handleChange = e => {
-    console.log(e.target)
     const { name, value } = e.target;
     setValues({
       ...values,
       [name]: value
     });
     let urk_sdz = 0.1834;
-    if(e.target.name=='amount'){
     if ( values.period==1) urk_sdz = 0.3910;
     if ( values.period>1 && values.period<6 ) urk_sdz = 0.2098; //0.22;
     if ( values.period>5 && values.period<9 ) urk_sdz = 0.1834;
-    let finalAmount = Math.round(PMT(Math.pow((1+urk_sdz),1/12)-1,(values.period*12),-1*e.target.value)*100) /100;
-    setMounthAmount(finalAmount)}
-
-    if(e.target.name=='period'){
-      if ( e.target.value==1) urk_sdz = 0.3910;
-      if ( e.target.value>1 && e.target.value<6 ) urk_sdz = 0.2098; //0.22;
-      if ( e.target.value>5 && e.target.value<9 ) urk_sdz = 0.1834;
-      let finalAmount = Math.round(PMT(Math.pow((1+urk_sdz),1/12)-1,(e.target.value*12),-1*values.amount)*100) /100;
-      setMounthAmount(finalAmount)}
+    console.log(values)
+    let finalAmount = Math.round(PMT(Math.pow((1+urk_sdz),1/12)-1,(values.period*12),-1*values.amount)*100) /100;
+    setMounthAmount(finalAmount)
   };
   return (
     <>
@@ -100,13 +91,10 @@ export default function Ziadost() {
                 max.
             </div>
             </div>
-            <div className="info">
+            <div className="vasurok">
         Priemerná hodnota RPNM od 9,12%
         </div>
-        <h2> Mesačná splátka: {mounthAmount}€</h2>
-        <div className="info2">
-            Výška splátky je len orientačná bude vypočítaná na základe Vašich individuálnych podmienok
-        </div>
+        <h1> Mesačná splátka: {mounthAmount}€</h1>
             </div>
 
       </form>
