@@ -36,25 +36,7 @@ export default function Ziadost() {
   const formik =  useFormik({
     initialValues: {
       amount: 5000,
-      period: 8,
-      name: '',
-      surnameMom:''
-    },
-    onSubmit: values => {
-      console.log('Form data',values)
-    },
-    validate: values => {
-      let errors ={}
-
-      if(!values.name) {
-        errors.name = 'Requiered'
-      }
-
-      if(!values.surnameMom) {
-        errors.name = 'Requiered'
-      }
-
-      return errors
+      period: 8
     }
   });
 
@@ -80,7 +62,7 @@ export default function Ziadost() {
       <h1 className='header-form'>
           Vyplňte formulár pre nezáväznu žiadosť o pôžičku.
         </h1>
-      <form onSubmit={formik.handleSubmit}>
+      <form>
       <div className='container-form'>
         <div className='section-name'>Požadovaná suma</div>
             <h2>{formik.values.amount}</h2>
@@ -128,15 +110,14 @@ export default function Ziadost() {
           <div className='personal-data'>
           <div className='section-name'>Základné informácie</div>
             <div className='personal-data-field'>
-          <label htmlFor="name">Meno a priezvisko:</label>
-      <input type="text" name="name" id="name" onChange={formik.handleChange} value={formik.values.name}/>
+          <label htmlFor="nameElm">Meno a priezvisko:</label>
+      <input type="text" name="name" id="name" onChange={formik.handleChange}/>
       </div>
       <div className='personal-data-field'>
-      <label htmlFor="surnameMom">Rodné priezvisko matky:</label>
-      <input type="text" name="surnameMom" id="surnameMom" onChange={formik.handleChange} value={formik.values.surnameMom}/>
+      <label for="nameElm">Rodné priezvisko matky:</label>
+      <input type="text" name="Meno" id="nameid" size="15" maxlength="50" oninvalid="alert('Vyplňte meno!');"/>
             </div>
             </div>
-            <button type='submit'>Submit</button>
       </form>
 
     </>

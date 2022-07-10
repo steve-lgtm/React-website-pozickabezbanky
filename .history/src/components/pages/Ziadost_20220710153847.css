@@ -82,18 +82,14 @@ font-weight: 300;
 .personal-data{
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
-    height: 15em;
-    margin: 0.5em;
+    justify-content:space-around;
+    height: 20vh;
+    
 }
 .personal-data-field{
     display: flex;
     flex-direction: column;
     justify-content:space-around;
-    height: 10vh;
-    margin: 0 1.5em;
-}
-input[type=text] {
-    border-radius: 0.5em;
-    height: 5vh;
+    height: 7vh;
+    margin: 0 2em;
 }

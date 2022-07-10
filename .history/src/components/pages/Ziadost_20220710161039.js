@@ -80,7 +80,7 @@ export default function Ziadost() {
       <h1 className='header-form'>
           Vyplňte formulár pre nezáväznu žiadosť o pôžičku.
         </h1>
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={formik.hand}>
       <div className='container-form'>
         <div className='section-name'>Požadovaná suma</div>
             <h2>{formik.values.amount}</h2>
@@ -136,7 +136,7 @@ export default function Ziadost() {
       <input type="text" name="surnameMom" id="surnameMom" onChange={formik.handleChange} value={formik.values.surnameMom}/>
             </div>
             </div>
-            <button type='submit'>Submit</button>
+            <button>Submit</button>
       </form>
 
     </>

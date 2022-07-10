@@ -40,17 +40,13 @@ export default function Ziadost() {
       name: '',
       surnameMom:''
     },
-    onSubmit: values => {
+    onSubmit: value => {
       console.log('Form data',values)
     },
     validate: values => {
       let errors ={}
 
       if(!values.name) {
-        errors.name = 'Requiered'
-      }
-
-      if(!values.surnameMom) {
         errors.name = 'Requiered'
       }
 
@@ -80,7 +76,7 @@ export default function Ziadost() {
       <h1 className='header-form'>
           Vyplňte formulár pre nezáväznu žiadosť o pôžičku.
         </h1>
-      <form onSubmit={formik.handleSubmit}>
+      <form>
       <div className='container-form'>
         <div className='section-name'>Požadovaná suma</div>
             <h2>{formik.values.amount}</h2>
@@ -132,11 +128,10 @@ export default function Ziadost() {
       <input type="text" name="name" id="name" onChange={formik.handleChange} value={formik.values.name}/>
       </div>
       <div className='personal-data-field'>
-      <label htmlFor="surnameMom">Rodné priezvisko matky:</label>
+      <label for="surnameMom">Rodné priezvisko matky:</label>
       <input type="text" name="surnameMom" id="surnameMom" onChange={formik.handleChange} value={formik.values.surnameMom}/>
             </div>
             </div>
-            <button type='submit'>Submit</button>
       </form>
 
     </>

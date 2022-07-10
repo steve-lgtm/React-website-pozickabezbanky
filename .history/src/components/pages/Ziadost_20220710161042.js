@@ -136,7 +136,7 @@ export default function Ziadost() {
       <input type="text" name="surnameMom" id="surnameMom" onChange={formik.handleChange} value={formik.values.surnameMom}/>
             </div>
             </div>
-            <button type='submit'>Submit</button>
+            <button>Submit</button>
       </form>
 
     </>
