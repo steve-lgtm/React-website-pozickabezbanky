@@ -2,13 +2,12 @@ import React, {useState, useRef} from 'react'
 import styled from 'styled-components'
 import '../../App.css';
 
-const Kontakt = () => {
+const Form = () => {
     const formRef = useRef(null)
-    const scriptUrl = "https://script.google.com/macros/s/AKfycbx8mdyBbbFygQgRKVFil4Jq6oQ0wliKhnyQt3KKqIJvqIw1lS1s5gE5fHh4RJZT9s8V9w/exec"
+    const scriptUrl = "get yours by practicing"
     const [loading, setLoading] = useState(false)
 
     const handleSubmit = (e) =>{
-      console.log(new FormData(formRef.current))
         e.preventDefault()
         setLoading(true)
 
@@ -51,7 +50,7 @@ const Kontakt = () => {
   )
 }
 
-export default Kontakt
+export default Form
 
 const FormStyle = styled.div`
     display: flex;
@@ -97,3 +96,4 @@ const FormStyle = styled.div`
     }
 
 `
+

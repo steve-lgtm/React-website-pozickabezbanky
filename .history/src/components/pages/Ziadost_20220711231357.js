@@ -41,7 +41,7 @@ export default function Ziadost() {
       surnameMom:''
     },
     onSubmit: values => {
-      console.log('Form data',values)
+      console.log('Form data',values.stringify)
     },
     validate: values => {
       let errors ={}

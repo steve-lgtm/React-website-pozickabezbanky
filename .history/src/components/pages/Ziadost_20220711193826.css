@@ -55,7 +55,7 @@ font-weight: 300;
 .section-name {
     align-self: flex-start;
     font-size: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
   .slider::-webkit-slider-thumb {

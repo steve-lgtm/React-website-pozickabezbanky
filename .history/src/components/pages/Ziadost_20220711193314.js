@@ -139,10 +139,6 @@ export default function Ziadost() {
       <label htmlFor="surnameMom">Rodné priezvisko matky:</label>
       <input type="text" name="surnameMom" id="surnameMom" onChange={formik.handleChange} value={formik.values.surnameMom}/>
             </div>
-            <div className='personal-data-field'>
-      <label htmlFor="surnameMom">Rodné priezvisko matky:</label>
-      <input type="text" name="surnameMom" id="surnameMom" onChange={formik.handleChange} value={formik.values.surnameMom}/>
-            </div>
             </div>
             <button type='submit'>Submit</button>
       </form>

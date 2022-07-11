@@ -4,7 +4,7 @@ import '../../App.css';
 
 const Kontakt = () => {
     const formRef = useRef(null)
-    const scriptUrl = "https://script.google.com/macros/s/AKfycbx8mdyBbbFygQgRKVFil4Jq6oQ0wliKhnyQt3KKqIJvqIw1lS1s5gE5fHh4RJZT9s8V9w/exec"
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbzUBKpGQw--GLhIKT_1MGtJA-xAeLhW42V5QbAk1ipFGB4sM-pQbkdIO3V09Mn3SAxz-g/exec"
     const [loading, setLoading] = useState(false)
 
     const handleSubmit = (e) =>{
