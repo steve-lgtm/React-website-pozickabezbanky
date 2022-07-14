@@ -65,8 +65,8 @@ export default function Ziadost() {
 
       if (!values.surnameMom) {
         errors.surnameMom = "Povinné pole!";
-      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.surnameMom)){
-        errors.surnameMom = 'invalid email format';
+      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/I.test(values.surnameMom)){
+        errors.email = 'invalid email format'
       }
 
 

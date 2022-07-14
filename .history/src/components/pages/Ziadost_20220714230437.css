@@ -97,11 +97,6 @@ input[type=text] {
     height: 3em;
     padding: 8px 10px;
 }
-input[type=email] {
-    border-radius: 0.5em;
-    height: 3em;
-    padding: 8px 10px;
-}
 .files-container {
     display: flex;
     justify-content: center;
@@ -137,6 +132,7 @@ input[type=email] {
     margin-top: 0.5em;
     color: red;
     text-align: center;
+    display: none;
 }
 .dzu-previewButton {
 padding-right:5em}

@@ -97,11 +97,6 @@ input[type=text] {
     height: 3em;
     padding: 8px 10px;
 }
-input[type=email] {
-    border-radius: 0.5em;
-    height: 3em;
-    padding: 8px 10px;
-}
 .files-container {
     display: flex;
     justify-content: center;
@@ -119,7 +114,7 @@ input[type=email] {
     margin-bottom: 0.2em;
     color: red;
 }
-.error-file-size {
+.error-file {
     height: 2em;
     font-size: 1rem;
     padding-left: 0.5em;
@@ -128,15 +123,6 @@ input[type=email] {
     color: red;
     text-align: center;
     display: none;
-}
-.error-file-required {
-    height: 2em;
-    font-size: 1rem;
-    padding-left: 0.5em;
-    margin-bottom: 0.2em;
-    margin-top: 0.5em;
-    color: red;
-    text-align: center;
 }
 .dzu-previewButton {
 padding-right:5em}

@@ -65,13 +65,10 @@ export default function Ziadost() {
 
       if (!values.surnameMom) {
         errors.surnameMom = "Povinné pole!";
-      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.surnameMom)){
-        errors.surnameMom = 'invalid email format';
       }
 
-
       if (values.sizeFile===1) {
-        errors.sizeFile = " ";
+        errors.sizeFile = "Príliš veľký súbor!";
       }
       if (values.sizeFile===0) {
         errors.sizeFile = "Nahrajte občianský preukaz!";
@@ -296,7 +293,7 @@ const onTargetClick = () => {
           <div className="personal-data-field">
             <label htmlFor="surnameMom">Rodné priezvisko matky:</label>
             <input
-              type="email"
+              type="text"
               name="surnameMom"
               id="surnameMom"
               onChange={formik.handleChange}

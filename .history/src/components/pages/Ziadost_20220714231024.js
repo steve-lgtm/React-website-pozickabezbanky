@@ -65,13 +65,10 @@ export default function Ziadost() {
 
       if (!values.surnameMom) {
         errors.surnameMom = "Povinné pole!";
-      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.surnameMom)){
-        errors.surnameMom = 'invalid email format';
       }
 
-
       if (values.sizeFile===1) {
-        errors.sizeFile = " ";
+        errors.sizeFile = "Príliš veľký súbor!";
       }
       if (values.sizeFile===0) {
         errors.sizeFile = "Nahrajte občianský preukaz!";
@@ -130,7 +127,7 @@ const onTargetClick = () => {
     if(files[0].file.size > 15728640){
       console.log(formik.touched.name)
       formik.values.sizeFile=1
-      formik.touched.sizeFile=false
+      formik.touched.sizeFile=true
       let classErrorFile = document.querySelector(".error-file-size");
       classErrorFile.style.display = 'block'
       return
@@ -148,7 +145,6 @@ const onTargetClick = () => {
       document.getElementById("fileData0").value = fileData;
       document.getElementById("mimeType0").value = mimeType;
       document.getElementById("fileName0").value = fileName;
-      formik.values.sizeFile=2
     };
   };
 
@@ -296,7 +292,7 @@ const onTargetClick = () => {
           <div className="personal-data-field">
             <label htmlFor="surnameMom">Rodné priezvisko matky:</label>
             <input
-              type="email"
+              type="text"
               name="surnameMom"
               id="surnameMom"
               onChange={formik.handleChange}
@@ -327,9 +323,9 @@ const onTargetClick = () => {
             Príliš veľký súbor!
             </div>
             <div className="error-file-required">
-            {formik.errors.sizeFile ? <div>{formik.errors.sizeFile}</div> : null}
+            Nahrajte občianský preukaz!
             </div>
-
+            {formik.errors.sizeFile ? <div>{formik.errors.sizeFile}</div> : null}
 
           </div>
         </div>

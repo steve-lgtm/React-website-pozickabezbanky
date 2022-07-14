@@ -97,11 +97,6 @@ input[type=text] {
     height: 3em;
     padding: 8px 10px;
 }
-input[type=email] {
-    border-radius: 0.5em;
-    height: 3em;
-    padding: 8px 10px;
-}
 .files-container {
     display: flex;
     justify-content: center;
