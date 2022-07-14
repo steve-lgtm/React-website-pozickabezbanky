@@ -1,0 +1,116 @@
+
+.container-form {
+margin: 0.5em;
+display: flex;
+flex-direction: column;
+align-items: center;
+font-weight: 300;
+}
+.pullleft{
+    margin-top:0.3em;
+    margin-bottom: 0.3em;
+    float: left;
+
+}
+.pullright{
+    margin-top:0.3em;
+    margin-bottom: 0.3em;
+    float: right;
+}
+
+.containerslider {
+    width: 90vw;
+    margin-bottom: 1em;
+}
+.header-form {
+    text-align: center;
+    font-size: 1rem;
+    padding: 1em;
+    padding-top: 1.5em;
+}
+.info{
+    font-size: 1rem;
+    color:black;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.info2{
+    font-size: 0.8rem;
+    color:black;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    background: #021391;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 1em;
+
+  }
+.section-name {
+    align-self: flex-start;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #000000;
+    cursor: pointer;
+  }
+.arrow{
+    width: 70px;
+    margin-bottom: -1em;
+}
+
+.personal-data{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin: 0.5em;
+}
+.personal-data-field{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    height: 7em;
+    margin: 0 1.5em;
+    margin-bottom: 1em;
+}
+input[type=text] {
+    border-radius: 0.5em;
+    height: 3em;
+    padding: 8px 10px;
+}
+.files-container {
+    display: flex;
+    justify-content: center;
+}
+.input-file-field {
+   width: 100vw;
+   margin: 0 2em;
+}
+
+.errors {
+    height: 1.5em;
+    font-size: 0.8rem;
+    background-color: red;
+}
+.dzu-previewButton {
+padding-right:5em}
