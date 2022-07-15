@@ -43,7 +43,8 @@ export default function Ziadost() {
       period: 8,
       name: "",
       surnameMom: "",
-      file: '',
+      sizeFile: 0,
+      email: "",
       job: "",
 
 
@@ -76,20 +77,19 @@ export default function Ziadost() {
         errors.surnameMom = "Povinné pole!";
       }
 
-     /* if (!values.email) {
+      if (!values.email) {
         errors.email = "Povinné pole!";
       } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.surnameMom)){
         errors.email = 'invalid email format';
       }
-*/
 
+      if (values.sizeFile===1) {
+        errors.sizeFile = "Príliš veľký súbor!";
+      }
+      if (values.sizeFile===0) {
+        errors.sizeFile = "Nahrajte občianský preukaz!";
+      }
 
-      if (!values.file) {
-        errors.file = "Nahrajte občianský preukaz!";
-      }
-      if (values.file===1) {
-        errors.file = "Príliš veľký súbor!";
-      }
 
       return errors;
     },
@@ -110,8 +110,8 @@ const styles = { border: '1px solid black', width: 600, color: 'black', padding:
 const onTargetClick = () => {
   fileInputRef.current.click()
 }*/
-console.log(formik.errors,"erorry")
-const NoDropzoneLayout = ({
+console.log(formik.values.job)
+  const NoDropzoneLayout = ({
     previews,
     submitButton,
     input,
@@ -132,16 +132,20 @@ const NoDropzoneLayout = ({
   };
 
   const handleChangeStatus = (file, allFiles, files) => {
-    console.log(formik.values.file)
+    console.log(formik.values.sizeFile)
     document.getElementById("fileData0").value = "";
       document.getElementById("mimeType0").value = "";
       document.getElementById("fileName0").value = "";
-      formik.setFieldTouched('file',true)
-      formik.setFieldValue('file','')
+      let classErrorFile = document.querySelector(".error-file-size");
+      classErrorFile.style.display = 'none'
+      formik.values.sizeFile=0
 
     if(files[0].file.size > 15728640){
-      formik.setFieldValue('file',1)
       console.log(formik.touched.name)
+      formik.values.sizeFile=1
+      formik.touched.sizeFile=false
+      let classErrorFile = document.querySelector(".error-file-size");
+      classErrorFile.style.display = 'block'
       return
     }
 
@@ -157,7 +161,7 @@ const NoDropzoneLayout = ({
       document.getElementById("fileData0").value = fileData;
       document.getElementById("mimeType0").value = mimeType;
       document.getElementById("fileName0").value = fileName;
-      formik.setFieldValue('file',2)
+      formik.values.sizeFile=2
     };
   };
   const options = [
@@ -327,7 +331,7 @@ const NoDropzoneLayout = ({
           </div>
           <div className="personal-data-field">
           <label htmlFor="surnameMom">Vaše zamestnanie:</label>
-          <Select options={options} placeholder="Vyberte jednu z možností" name="job" id="job" onChange={e => {formik.setFieldValue("job",e.value);formik.setFieldTouched('job',false)}} isSearchable={false} />
+          <Select options={options}  name="job" id="job" onChange={e => {formik.setFieldValue("job",e.value);formik.setFieldTouched('job',false)}} isSearchable={false} />
           <div className="errors">
             {formik.errors.job && formik.touched.job ? <div>{formik.errors.job}</div> : null}
             </div>
@@ -349,7 +353,7 @@ const NoDropzoneLayout = ({
               maxSizeBytes={15728640}
               />
               <div className="error-file-size">
-              {formik.errors.file && formik.touched.file ? <div>{formik.errors.file}</div> : null}
+              {formik.errors.job && formik.touched.job ? <div>{formik.errors.job}</div> : null}
             </div>
               {/* A JSX comment
 
@@ -357,7 +361,7 @@ const NoDropzoneLayout = ({
             Príliš veľký súbor!
             </div>
             <div className="error-file-required">
-            {formik.errors.file ? <div>{formik.errors.file}</div> : null}
+            {formik.errors.sizeFile ? <div>{formik.errors.sizeFile}</div> : null}
             </div>
 
 */}

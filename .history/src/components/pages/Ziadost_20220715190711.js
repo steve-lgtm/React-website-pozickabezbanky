@@ -44,6 +44,7 @@ export default function Ziadost() {
       name: "",
       surnameMom: "",
       file: '',
+      email: "",
       job: "",
 
 
@@ -76,12 +77,12 @@ export default function Ziadost() {
         errors.surnameMom = "Povinné pole!";
       }
 
-     /* if (!values.email) {
+      if (!values.email) {
         errors.email = "Povinné pole!";
       } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.surnameMom)){
         errors.email = 'invalid email format';
       }
-*/
+
 
 
       if (!values.file) {
@@ -327,7 +328,7 @@ const NoDropzoneLayout = ({
           </div>
           <div className="personal-data-field">
           <label htmlFor="surnameMom">Vaše zamestnanie:</label>
-          <Select options={options} placeholder="Vyberte jednu z možností" name="job" id="job" onChange={e => {formik.setFieldValue("job",e.value);formik.setFieldTouched('job',false)}} isSearchable={false} />
+          <Select options={options}  name="job" id="job" onChange={e => {formik.setFieldValue("job",e.value);formik.setFieldTouched('job',false)}} isSearchable={false} />
           <div className="errors">
             {formik.errors.job && formik.touched.job ? <div>{formik.errors.job}</div> : null}
             </div>

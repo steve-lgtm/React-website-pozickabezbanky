@@ -44,6 +44,7 @@ export default function Ziadost() {
       name: "",
       surnameMom: "",
       file: '',
+      email: "",
       job: "",
 
 
@@ -327,7 +328,7 @@ const NoDropzoneLayout = ({
           </div>
           <div className="personal-data-field">
           <label htmlFor="surnameMom">Vaše zamestnanie:</label>
-          <Select options={options} placeholder="Vyberte jednu z možností" name="job" id="job" onChange={e => {formik.setFieldValue("job",e.value);formik.setFieldTouched('job',false)}} isSearchable={false} />
+          <Select options={options}  name="job" id="job" onChange={e => {formik.setFieldValue("job",e.value);formik.setFieldTouched('job',false)}} isSearchable={false} />
           <div className="errors">
             {formik.errors.job && formik.touched.job ? <div>{formik.errors.job}</div> : null}
             </div>
