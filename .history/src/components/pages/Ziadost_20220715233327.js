@@ -121,8 +121,8 @@ export default function Ziadost() {
       if (!values.rodinnýstav) {
         errors.rodinnýstav = "Vyberte jednu z možností!";
       }
-      if (!values.príjemNaÚčet) {
-        errors.príjemNaÚčet = "Vyberte jednu z možností!";
+      if (!values.príjemNaÚče) {
+        errors.príjemNaÚče = "Vyberte jednu z možností!";
       }
 
       if (!values.priezviskoMatky) {

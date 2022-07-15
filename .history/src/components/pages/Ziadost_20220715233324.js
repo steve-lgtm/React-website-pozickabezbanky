@@ -121,8 +121,8 @@ export default function Ziadost() {
       if (!values.rodinnýstav) {
         errors.rodinnýstav = "Vyberte jednu z možností!";
       }
-      if (!values.príjemNaÚčet) {
-        errors.príjemNaÚčet = "Vyberte jednu z možností!";
+      if (!values.príjemNaÚče) {
+        errors.príjemNaÚče = "Vyberte jednu z možností!";
       }
 
       if (!values.priezviskoMatky) {
@@ -650,7 +650,7 @@ const NoDropzoneLayout = ({
             </div>
             <div className="personal-data-field">
           <label htmlFor="príjemNaÚčet">Dostávate príjem na účet</label>
-          <Select styles={styles} options={optionsPríjemNaÚčet} placeholder="" name="typBývania" id="typBývania" onChange={e => {formik.setFieldValue("príjemNaÚčet",e.value);formik.setFieldTouched('príjemNaÚčet',false)}} isSearchable={false} />
+          <Select styles={styles} options={optionsPríjemNaÚčet} placeholder="" name="typBývania" id="typBývania" onChange={e => {formik.setFieldValue("príjemNaÚčet",e.value);formik.setFieldTouched('príjemNaÚče',false)}} isSearchable={false} />
           <div className="errors">
             {formik.errors.príjemNaÚčet && formik.touched.príjemNaÚčet ? <div>{formik.errors.príjemNaÚčet}</div> : null}
             </div>
