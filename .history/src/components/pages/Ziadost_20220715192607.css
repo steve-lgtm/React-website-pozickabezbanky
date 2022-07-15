@@ -94,10 +94,9 @@ font-weight: 300;
 }
 input[type=text] {
     border-radius: 0.5em;
-    height: 2.7em;
+    height: 3em;
     padding: 8px 10px;
-    border-width: 1px;
-    border-color: lightgrey;
+    border-width: 3em;
 }
 input[type=email] {
     border-radius: 0.5em;

@@ -169,7 +169,10 @@ const NoDropzoneLayout = ({
     { value: 'Opatrovateľ na zmluvu', label: 'Opatrovateľ na zmluvu' },
     { value: 'Živnostník na SK', label: 'Živnostník na SK' },
   ]
-
+  const customStyles = {
+    container: () =>({
+    borderWidth: 20,
+  })
 
   const handleSubmit = (e) =>{
     e.preventDefault()
@@ -328,7 +331,7 @@ const NoDropzoneLayout = ({
           </div>
           <div className="personal-data-field">
           <label htmlFor="surnameMom">Vaše zamestnanie:</label>
-          <Select options={options} placeholder="" name="job" id="job" onChange={e => {formik.setFieldValue("job",e.value);formik.setFieldTouched('job',false)}} isSearchable={false} />
+          <Select styles={customStyles} options={options} placeholder="Vyberte jednu z možností" name="job" id="job" onChange={e => {formik.setFieldValue("job",e.value);formik.setFieldTouched('job',false)}} isSearchable={false} />
           <div className="errors">
             {formik.errors.job && formik.touched.job ? <div>{formik.errors.job}</div> : null}
             </div>
@@ -342,7 +345,7 @@ const NoDropzoneLayout = ({
               styles={{
                 inputLabelWithFiles: { display: "none" },
                 previewImage: { maxHeight: 200, maxWidth: 200, marginLeft: 20,  },
-                dropzone: { borderWidth:1, borderColor:'black'  }
+                dropzone: { borderWidth:2, borderColor:'black'  }
               }}
               onChangeStatus={handleChangeStatus}
               inputContent="Vybrať súbory"

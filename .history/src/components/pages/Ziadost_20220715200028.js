@@ -342,7 +342,7 @@ const NoDropzoneLayout = ({
               styles={{
                 inputLabelWithFiles: { display: "none" },
                 previewImage: { maxHeight: 200, maxWidth: 200, marginLeft: 20,  },
-                dropzone: { borderWidth:1, borderColor:'black'  }
+                dropzone: { borderWidth:2, borderColor:'black'  }
               }}
               onChangeStatus={handleChangeStatus}
               inputContent="Vybrať súbory"
