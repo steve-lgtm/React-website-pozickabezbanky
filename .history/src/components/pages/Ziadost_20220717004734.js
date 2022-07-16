@@ -936,7 +936,7 @@ Nahrajte max. 3 súbory. (Najvhodnejšie 1-2 PDF súbory.)
                 du tu errory prosim oprav ich a skus znova
   </div>
 <div className="submit-button">
-      <button type="submit" onClick={()=>validate()} className="button">Odoslať nezáväznu žiadosť</button>
+      <button type="submit" onClick={validate()} className="button">Odoslať nezáväznu žiadosť</button>
   </div>
 
 

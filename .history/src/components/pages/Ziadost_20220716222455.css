@@ -173,15 +173,6 @@ input[type=email] {
     color: red;
     text-align: center;
 }
-.error-final{
-    height: 1.5em;
-    font-size: 1rem;
-    padding-left: 0.5em;
-    margin-top: 0.5em;
-    color: red;
-    text-align: center;
-    display: none;
-}
 .error-file-required {
     height: 2em;
     font-size: 1rem;
@@ -196,12 +187,7 @@ padding-right:5em}
 
 .submit-button{
     text-align: center;
-    margin-bottom: 1em;
-}
-.final-errors{
-    text-align: center;
     margin-bottom: 3em;
-
 }
 .tlacidlo {
     height: 4em;
@@ -224,13 +210,12 @@ button, button:focus{
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: rgb(23, 175, 46);
+    color: rgb(0, 138, 21);
     outline: 2px solid rgb(0, 0, 0);
-    padding: 15px 20px;
+    padding: 20px 20px;
     position: relative;
     overflow: hidden;
     transition: color 1s;
-    font-weight: 400;
 }
 
 .button:hover{

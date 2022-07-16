@@ -160,6 +160,8 @@ export default function Ziadost() {
       if (values.file234===3) {
         errors.file234 = "Nahrajte maximálne 3 súbory!";
       }
+      if (values.isfinalErrorsEmpty===false)
+        errors.isfinalErrorsEmpty="Niekde sú chyby, skontrolujte údaje"
 
       return errors;
     },
@@ -352,22 +354,13 @@ const NoDropzoneLayout = ({
   console.log(prechodneByvanie)
 }
 const validate = () =>{
-  if(formik.isValid===false){
-    let finalErros = document.querySelector(".error-final");
-  finalErros.style.display = "block";
-  }
-  else
-  {
-    let finalErros = document.querySelector(".error-final");
-  finalErros.style.display = "none";
-  }
-  /*if(formik.isValid===false || isValidate===false){
+  if(formik.isValid===false || isValidate===false){
+    setIsValidate(false)
     console.log(formik.errors)
-    formik.setFieldValue("isfinalErrorsEmpty",false)
+    {formik.setFieldValue("zamestnanie",e.value);
 
-  }*/
+  }
 }
-
   const handleSubmit = (e) =>{
     e.preventDefault()
     setLoading(true)
@@ -932,13 +925,12 @@ Nahrajte max. 3 súbory. (Najvhodnejšie 1-2 PDF súbory.)
               name="mimeType4"
               id="mimeType4"
             />
-            <div className="error-final">
-                du tu errory prosim oprav ich a skus znova
-  </div>
 <div className="submit-button">
-      <button type="submit" onClick={()=>validate()} className="button">Odoslať nezáväznu žiadosť</button>
+      <button type="submit" onClick={validate} className="button">Odoslať nezáväznu žiadosť</button>
   </div>
-
+  <div className="final-errors">
+    {!isValidate ? <div>su tu errory oprav ich</div> : null}
+  </div>
 
       </form>
 

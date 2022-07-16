@@ -180,7 +180,6 @@ input[type=email] {
     margin-top: 0.5em;
     color: red;
     text-align: center;
-    display: none;
 }
 .error-file-required {
     height: 2em;

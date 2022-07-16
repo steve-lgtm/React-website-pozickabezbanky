@@ -36,7 +36,6 @@ export default function Ziadost() {
   const [mounthsuma, setMounthsuma] = useState(95.48);
   const scriptUrl = "https://script.google.com/macros/s/AKfycby8SnqrEVknIbEd1tFXfaXP9cq5FX1LKt2F4kuVrqJBzqRXB_747uhCQpm3nBa6fdqwyA/exec"
     const [loading, setLoading] = useState(false)
-    const [isValidate, setIsValidate] = useState(false)
     const [prechodneByvanie, setPrechodneByvanie] = useState(false)
     const formRef = useRef(null)
   const formik = useFormik({
@@ -65,11 +64,11 @@ export default function Ziadost() {
       prechádzajúciMesiac:'',
       predPrechádzajúciMesiac:'',
       príjemNaÚčet:'',
-      IBAN:'',
-      isfinalErrorsEmpty:''
+      IBAN:''
 
 
     },
+    console.log(formik.isValid)
 
     onSubmit: (values) => {
       setLoading(true)
@@ -153,7 +152,9 @@ export default function Ziadost() {
       if (values.file1===1) {
         errors.file1 = "Príliš veľký súbor!";
       }
-
+      if (!values.file234) {
+        errors.file234 = "Nahrajte občianský preukaz!";
+      }
       if (values.file234===1) {
         errors.file234 = "Príliš veľký súbor!";
       }
@@ -161,10 +162,10 @@ export default function Ziadost() {
         errors.file234 = "Nahrajte maximálne 3 súbory!";
       }
 
+
       return errors;
     },
   });
-
   /*const fileInputRef = useRef(null);
 const onFileInputChange = (event) => {
   const { files } = event.target;
@@ -350,22 +351,6 @@ const NoDropzoneLayout = ({
     dorucovaciaAdresa.style.display = "none";
   }
   console.log(prechodneByvanie)
-}
-const validate = () =>{
-  if(formik.isValid===false){
-    let finalErros = document.querySelector(".error-final");
-  finalErros.style.display = "block";
-  }
-  else
-  {
-    let finalErros = document.querySelector(".error-final");
-  finalErros.style.display = "none";
-  }
-  /*if(formik.isValid===false || isValidate===false){
-    console.log(formik.errors)
-    formik.setFieldValue("isfinalErrorsEmpty",false)
-
-  }*/
 }
 
   const handleSubmit = (e) =>{
@@ -932,14 +917,9 @@ Nahrajte max. 3 súbory. (Najvhodnejšie 1-2 PDF súbory.)
               name="mimeType4"
               id="mimeType4"
             />
-            <div className="error-final">
-                du tu errory prosim oprav ich a skus znova
-  </div>
 <div className="submit-button">
-      <button type="submit" onClick={()=>validate()} className="button">Odoslať nezáväznu žiadosť</button>
+      <button type="submit" class="button">Odoslať nezáväznu žiadosť</button>
   </div>
-
-
       </form>
 
 

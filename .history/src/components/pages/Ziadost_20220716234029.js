@@ -65,8 +65,7 @@ export default function Ziadost() {
       prechádzajúciMesiac:'',
       predPrechádzajúciMesiac:'',
       príjemNaÚčet:'',
-      IBAN:'',
-      isfinalErrorsEmpty:''
+      IBAN:''
 
 
     },
@@ -153,13 +152,16 @@ export default function Ziadost() {
       if (values.file1===1) {
         errors.file1 = "Príliš veľký súbor!";
       }
-
+      if (!values.file234) {
+        errors.file234 = "Nahrajte občianský preukaz!";
+      }
       if (values.file234===1) {
         errors.file234 = "Príliš veľký súbor!";
       }
       if (values.file234===3) {
         errors.file234 = "Nahrajte maximálne 3 súbory!";
       }
+
 
       return errors;
     },
@@ -352,22 +354,18 @@ const NoDropzoneLayout = ({
   console.log(prechodneByvanie)
 }
 const validate = () =>{
-  if(formik.isValid===false){
-    let finalErros = document.querySelector(".error-final");
-  finalErros.style.display = "block";
-  }
-  else
-  {
-    let finalErros = document.querySelector(".error-final");
-  finalErros.style.display = "none";
-  }
-  /*if(formik.isValid===false || isValidate===false){
+  if(formik.isValid===false || isValidate===false){
+    setIsValidate(false)
     console.log(formik.errors)
-    formik.setFieldValue("isfinalErrorsEmpty",false)
 
-  }*/
+  }
+  else{
+  setIsValidate(true)
+  console.log(formik.errors)
+
+
+  }
 }
-
   const handleSubmit = (e) =>{
     e.preventDefault()
     setLoading(true)
@@ -932,13 +930,11 @@ Nahrajte max. 3 súbory. (Najvhodnejšie 1-2 PDF súbory.)
               name="mimeType4"
               id="mimeType4"
             />
-            <div className="error-final">
-                du tu errory prosim oprav ich a skus znova
-  </div>
 <div className="submit-button">
-      <button type="submit" onClick={()=>validate()} className="button">Odoslať nezáväznu žiadosť</button>
+      <button type="submit" onClick={validate} className="button">Odoslať nezáväznu žiadosť</button>
   </div>
-
+  <div className="submit-button">
+  </div>
 
       </form>
 

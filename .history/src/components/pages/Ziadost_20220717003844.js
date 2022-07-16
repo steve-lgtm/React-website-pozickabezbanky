@@ -352,15 +352,13 @@ const NoDropzoneLayout = ({
   console.log(prechodneByvanie)
 }
 const validate = () =>{
-  if(formik.isValid===false){
-    let finalErros = document.querySelector(".error-final");
+  if(formik.isValid===true){
+    formik.setFieldValue("isfinalErrorsEmpty",true)
+    return
+  }
+  let finalErros = document.querySelector(".error-final");
   finalErros.style.display = "block";
-  }
-  else
-  {
-    let finalErros = document.querySelector(".error-final");
-  finalErros.style.display = "none";
-  }
+
   /*if(formik.isValid===false || isValidate===false){
     console.log(formik.errors)
     formik.setFieldValue("isfinalErrorsEmpty",false)
@@ -936,7 +934,7 @@ Nahrajte max. 3 súbory. (Najvhodnejšie 1-2 PDF súbory.)
                 du tu errory prosim oprav ich a skus znova
   </div>
 <div className="submit-button">
-      <button type="submit" onClick={()=>validate()} className="button">Odoslať nezáväznu žiadosť</button>
+      <button type="submit" onClick={validate} className="button">Odoslať nezáväznu žiadosť</button>
   </div>
 
 
