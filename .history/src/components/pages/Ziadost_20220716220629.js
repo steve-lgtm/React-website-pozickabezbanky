@@ -914,11 +914,12 @@ Nahrajte max. 3 súbory. (Najvhodnejšie 1-2 PDF súbory.)
               id="mimeType4"
             />
 <div className="submit-button">
-      <button type="submit" class="button">Odoslať nezáväznu žiadosť</button>
-
-  </div>
+        <input className="tlacidlo" type="submit" value={loading ? "Loading..." : "SEND MESSAGE"}/>
+        </div>
       </form>
-
+      <div className="submit-button">
+      
+  </div>
 
     </>
   );
