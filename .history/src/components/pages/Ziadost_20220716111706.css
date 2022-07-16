@@ -1,0 +1,171 @@
+
+.container-form {
+margin: 0.5em;
+display: flex;
+flex-direction: column;
+align-items: center;
+font-weight: 300;
+}
+.pullleft{
+    margin-top:0.3em;
+    margin-bottom: 0.3em;
+    float: left;
+
+}
+.pullright{
+    margin-top:0.3em;
+    margin-bottom: 0.3em;
+    float: right;
+}
+
+.containerslider {
+    width: 90vw;
+    margin-bottom: 1em;
+}
+.header-form {
+    text-align: center;
+    font-size: 1rem;
+    padding: 1em;
+    padding-top: 1.5em;
+}
+.info{
+    font-size: 1rem;
+    color:black;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.info2{
+    font-size: 0.8rem;
+    color:black;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    background: #021391;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 1em;
+
+  }
+.section-name {
+    align-self: flex-start;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+.section-name-prijem{
+    align-self: flex-start;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+.no-wrap{
+    white-space: nowrap;
+}
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #000000;
+    cursor: pointer;
+  }
+.arrow{
+    width: 70px;
+    margin-bottom: -1em;
+}
+
+.personal-data{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin: 0.5em;
+}
+.dorucovacia-adresa{
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin: 0.5em;
+    display: none;
+}
+.personal-data-field{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    height: 5.5em;
+    margin: 0 1.5em;
+}
+.prechodne-bydlisko-field{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin-bottom: 1em;
+}
+input[type=text] {
+    border-radius: 0.5em;
+    height: 2.8em;
+    padding: 8px 10px;
+    border-width: 2px;
+}
+input[type=checkbox] {
+   height: 18px;
+   width: 18px;
+   margin-right: 1em;
+
+}
+input[type=email] {
+    border-radius: 0.5em;
+    height: 3em;
+    padding: 8px 10px;
+}
+.files-container {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin: 0.5em;
+}
+.input-file-field {
+   margin: 0 2em;
+}
+
+.input-file-field-name {
+    margin: 0 2em;
+    margin-bottom: 1em;
+ }
+
+.errors {
+    height: 1em;
+    font-size: 0.7rem;
+    padding-left: 0.5em;
+    margin-bottom: 0.2em;
+    color: red;
+}
+.error-file-size {
+    height: 1.5em;
+    font-size: 1rem;
+    padding-left: 0.5em;
+    margin-top: 0.5em;
+    color: red;
+    text-align: center;
+}
+.error-file-required {
+    height: 2em;
+    font-size: 1rem;
+    padding-left: 0.5em;
+    margin-bottom: 0.2em;
+    margin-top: 0.5em;
+    color: red;
+    text-align: center;
+}
+.dzu-previewButton {
+padding-right:5em}

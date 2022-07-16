@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/docasna/static/css/main.56b8c233.css",
-    "main.js": "/docasna/static/js/main.f8d12a9e.js",
+    "main.css": "/docasna/static/css/main.d1863413.css",
+    "main.js": "/docasna/static/js/main.c89f2868.js",
     "index.html": "/docasna/index.html",
-    "main.56b8c233.css.map": "/docasna/static/css/main.56b8c233.css.map",
-    "main.f8d12a9e.js.map": "/docasna/static/js/main.f8d12a9e.js.map"
+    "main.d1863413.css.map": "/docasna/static/css/main.d1863413.css.map",
+    "main.c89f2868.js.map": "/docasna/static/js/main.c89f2868.js.map"
   },
   "entrypoints": [
-    "static/css/main.56b8c233.css",
-    "static/js/main.f8d12a9e.js"
+    "static/css/main.d1863413.css",
+    "static/js/main.c89f2868.js"
   ]
 }
