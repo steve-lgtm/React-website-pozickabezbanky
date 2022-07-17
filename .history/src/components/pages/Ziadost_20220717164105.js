@@ -11,8 +11,6 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {useNavigate} from 'react-router-dom';
-
 
 
 function PMT(ir, np, pv, fv, type) {
@@ -62,23 +60,6 @@ const style2 = {
   alignItems:'center'
 
 };
-const style3 = {
-  display:'flex',
-  flexDirection:'column',
-  alignItems:'center',
-
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: '95%',
-  maxHeight: 'calc(100vh - 200px)',
-  overflowY: 'auto',
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 2,
-};
 
 export default function Ziadost() {
   const [mounthsuma, setMounthsuma] = useState(95.48);
@@ -86,7 +67,6 @@ export default function Ziadost() {
     const [loading, setLoading] = useState(false)
     const [isValidate, setIsValidate] = useState(false)
     const [suhlasOU, setSuhlasOU] = useState(false)
-    const navigate = useNavigate();
 
     const [prechodneByvanie, setPrechodneByvanie] = useState(false)
 
@@ -132,20 +112,19 @@ export default function Ziadost() {
 
     onSubmit: (values) => {
       setLoading(true)
-
       fetch(scriptUrl, {
       method: 'POST',
       body: new FormData(formRef.current),
 
   }).then(res => {
           console.log("SUCCESSFULLY SUBMITTED")
-          navigate('/dakujeme', {replace: true})
+          setLoading(false)
       })
       .catch(err => console.log(err))
     },
     validate: (values) => {
       let errors = {};
-/*
+
       if (!values.meno) {
         errors.meno = "Povinné pole!";
       }
@@ -234,7 +213,7 @@ export default function Ziadost() {
       }
       if (values.file234===3) {
         errors.file234 = "Nahrajte maximálne 3 súbory!";
-      }*/
+      }
 
       return errors;
     },
@@ -1046,7 +1025,6 @@ Nahrajte max. 3 súbory. (Najvhodnejšie 1-2 PDF súbory.)
               {formik.errors.suhlas && formik.touched.suhlas ? <div>{formik.errors.suhlas}</div> : null}
             </div>
         </div>
-
 <Modal
   open={open}
   onClose={handleClose}
@@ -1075,19 +1053,30 @@ Naša spoločnosť Zinc Euro, a.s.  vykonáva finančné sprostredkovanie na zá
   </Box>
 </Modal>
 <Modal
-  open={loading}
+  open={open}
+  onClose={handleClose}
   aria-labelledby="modal-modal-title"
   aria-describedby="modal-modal-description"
 >
-  <Box sx={style3}>
-  <div className="spinner"></div>
+  <Box sx={style}>
+  <Box sx={style2}>
 
-    <div className="name-modalis">
-      Počkajte prosím na tejto stránke, údaje sa odosielaju.
+    <div className="name-modal">
+      Spracovanie osobných údajov
     </div>
+    <FontAwesomeIcon onClick={handleClose} className="icona" icon="fa-solid fa-x" />
 
+    </Box>
+    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+    Vyššie uvedené osobné údaje vyplnením a zaslaním tohto formulára poskytujete našej spoločnosti – Zinc Euro, a.s. so sídlom Karpatská 3256/15, 058 01 Poprad , IČO: 47918551, DIČ: 2024151833, IČ DPH: SK2024151833, ako sprostredkovateľovi podľa zákona č. 186/2009 Z. z. o finančnom sprostredkovaní a finančnom poradenstve, ktorá je držiteľom povolenia Národnej banky Slovenska na výkon činnosti viazaného finančného agenta, Reg. číslo NBS: 242137 a je zapísaná v podregistri poskytovania úverov, úverov na bývanie a spotrebiteľských úverov odo dňa 13.12.2018 (ďalej aj len ako „viazaný finančný agent“), a ktorá je tiež súčasne sprostredkovateľom osobných údajov (t. j. spracúva osobné údaje v mene prevádzkovateľa) podľa Čl. 28 Nariadenia EP a Rady (EÚ) 2016/679 z 27. apríla 2016 (GDPR) a to pre prevádzkovateľa – spoločnosť Amico Finance a. s. so sídlom Dvořákovo nábrežie 4, 811 02 Bratislava, IČO: 48 113 671, zapísaná v obchodnom registri Okresného súdu Bratislava I, odd. Sa, vl. č. 6128/B ako poskytovateľa spotrebiteľských úverov (ďalej len Amico Finance, a. s.). Naša spoločnosť spracúva osobné údaje ako prevádzkovateľ iba v rozsahu nevyhnutnom na plnenie jej povinností a výkon práv finančného agenta v súlade so zákonom č. 186/2009 Z. z.
 
+Údaje, ktoré uvediete v tomto formulári, budú zo strany prevádzkovateľa – spoločnosti Amico Finance a. s. spracúvané za účelom zistenia a overenia totožnosti klienta a plnenia iných povinností podľa zákona č. 297/2008 Z. z. o ochrane pred legalizáciou príjmov z trestnej činnosti a o ochrane pred financovaním terorizmu, posudzovania žiadosti o poskytnutie spotrebiteľského úveru, vrátane posudzovania schopnosti klienta splácať splátky spotrebiteľského úveru a za účelom uzatvárania, plnenia a správy zmluvy o spotrebiteľskom úvere/inom úvere a splnenia si zákonných povinností prevádzkovateľa v súvislosti s informovaním klienta pri poskytovaní spotrebiteľského úveru.
 
+Podrobnosti o spracovaní osobných údajov zo strany spoločnosti Amico Finance a. s., ktoré zároveň spracúva naša spoločnosť ako sprostredkovateľ podľa Čl. 28 GDPR, ako aj o Vašich
+právach s tým súvisiacich nájdete na internetovej stránke prevádzkovateľa https://www.ahojsplatky.sk/ochrana-osobnych-udajov.
+
+Naša spoločnosť Zinc Euro, a.s.  vykonáva finančné sprostredkovanie na základe písomnej zmluvy s jednou finančnou inštitúciou a to spoločnosťou Amico Finance a. s. Táto zmluva má výhradnú povahu. Bližšie informácie o finančnom sprostredkovaní Vám budú poskytnuté písomne prostredníctvom formulára a súčasne na webe https://www.zinceuro.sk/informacie-o-financnom-sprostredkovani.
+    </Typography>
   </Box>
 </Modal>
         <input

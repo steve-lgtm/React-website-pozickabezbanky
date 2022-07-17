@@ -11,8 +11,6 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {useNavigate} from 'react-router-dom';
-
 
 
 function PMT(ir, np, pv, fv, type) {
@@ -86,7 +84,6 @@ export default function Ziadost() {
     const [loading, setLoading] = useState(false)
     const [isValidate, setIsValidate] = useState(false)
     const [suhlasOU, setSuhlasOU] = useState(false)
-    const navigate = useNavigate();
 
     const [prechodneByvanie, setPrechodneByvanie] = useState(false)
 
@@ -132,16 +129,16 @@ export default function Ziadost() {
 
     onSubmit: (values) => {
       setLoading(true)
-
+     /*
       fetch(scriptUrl, {
       method: 'POST',
       body: new FormData(formRef.current),
 
   }).then(res => {
           console.log("SUCCESSFULLY SUBMITTED")
-          navigate('/dakujeme', {replace: true})
+          setLoading(false)
       })
-      .catch(err => console.log(err))
+      .catch(err => console.log(err))*/
     },
     validate: (values) => {
       let errors = {};
@@ -1080,10 +1077,10 @@ Naša spoločnosť Zinc Euro, a.s.  vykonáva finančné sprostredkovanie na zá
   aria-describedby="modal-modal-description"
 >
   <Box sx={style3}>
-  <div className="spinner"></div>
+  <div class="spinner"></div>
 
     <div className="name-modalis">
-      Počkajte prosím na tejto stránke, údaje sa odosielaju.
+      Počkajte prosím na tejto stránke pokiaľ nebudete presmerovaný, údaje sa odosielaju.
     </div>
 
 

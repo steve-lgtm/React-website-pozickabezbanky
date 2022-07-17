@@ -11,8 +11,6 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {useNavigate} from 'react-router-dom';
-
 
 
 function PMT(ir, np, pv, fv, type) {
@@ -139,7 +137,7 @@ export default function Ziadost() {
 
   }).then(res => {
           console.log("SUCCESSFULLY SUBMITTED")
-          navigate('/dakujeme', {replace: true})
+          navigate('/sample', {replace: true}), [navigate])
       })
       .catch(err => console.log(err))
     },
@@ -1080,7 +1078,7 @@ Naša spoločnosť Zinc Euro, a.s.  vykonáva finančné sprostredkovanie na zá
   aria-describedby="modal-modal-description"
 >
   <Box sx={style3}>
-  <div className="spinner"></div>
+  <div class="spinner"></div>
 
     <div className="name-modalis">
       Počkajte prosím na tejto stránke, údaje sa odosielaju.

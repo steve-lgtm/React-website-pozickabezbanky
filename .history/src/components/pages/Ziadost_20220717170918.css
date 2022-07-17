@@ -9,8 +9,8 @@
 
 .spinner {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
 }
 .spinner::before,
@@ -178,12 +178,6 @@
 .name-modal{
     font-size: 1.2rem;
     margin-right: 0.4em;
-}
-.name-modalis{
-    font-size: 1.2rem;
-    margin-right: 0.4em;
-    text-align: center;
-    margin-top: 1em;
 }
 .icona{
     font-size: 20px;

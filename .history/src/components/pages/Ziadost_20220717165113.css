@@ -7,44 +7,64 @@
 
 }
 
-.spinner {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
-.spinner::before,
-.spinner:after{
-    content: "";
-    position: absolute;
-    border-radius: inherit;
-}
-.spinner:before {
-    width: 100%;
-    height: 100%;
-    background-image:linear-gradient(
-        0deg, #ff00cc 0%,
-        #333399 100% );
-    animation: spin .5s infinite linear;
-}
-.spinner:after {
-    width: 85%;
-    height: 85%;
-    background-color: #ffffff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
+
+<span class="loader"></span>
+1 .loader {
+2 display: inline-block;
+7
+8
+index.html
+9
+10 }
+3
+4
+5 border-radius: 40px;
+background-color:
+6
+styles.css
+14
+15
+16
+17
+18
+width: 250px;
+height: 20px;
+11
+12 .loader::before {
+content: "";
+rgba(255, 255, 255, 1);
+position: relative;
+overflow: hidden;
+position: absolute;
+top: 0;
+left: -50px;
+width: 150%;
+height: 100%;
 
 
 
 
 
+
+@keyframes scale {
+50% {
+transform: scalex(1);
+19 background-image:
+20 linear-gradient (332deg,
+#6b70ff, #f8adff);
+21
+22 border-radius: inherit;
+23
+transform: scalex(0);
+transform-origin: left;
+24
+25 animation: scale is infinite;
+26 }
+}
+100% {
+transform: scalex(0);
+transform-origin: right;
+}
 
 
 .pullleft{
@@ -178,12 +198,6 @@
 .name-modal{
     font-size: 1.2rem;
     margin-right: 0.4em;
-}
-.name-modalis{
-    font-size: 1.2rem;
-    margin-right: 0.4em;
-    text-align: center;
-    margin-top: 1em;
 }
 .icona{
     font-size: 20px;

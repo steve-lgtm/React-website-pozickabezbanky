@@ -1080,7 +1080,7 @@ Naša spoločnosť Zinc Euro, a.s.  vykonáva finančné sprostredkovanie na zá
   aria-describedby="modal-modal-description"
 >
   <Box sx={style3}>
-  <div className="spinner"></div>
+  <div class="spinner"></div>
 
     <div className="name-modalis">
       Počkajte prosím na tejto stránke, údaje sa odosielaju.
