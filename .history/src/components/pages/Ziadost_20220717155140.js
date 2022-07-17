@@ -1032,7 +1032,7 @@ Nahrajte max. 3 súbory. (Najvhodnejšie 1-2 PDF súbory.)
     <div className="name-modal">
       Spracovanie osobných údajov
     </div>
-    <FontAwesomeIcon onClick={handleClose} className="icona" icon="fa-solid fa-x" />
+    <Button style={{}} onClick={handleClose}><FontAwesomeIcon onClick={handleClose} className="icona" icon="fa-solid fa-x" /></Button>
 
     </Box>
     <Typography id="modal-modal-description" sx={{ mt: 2 }}>

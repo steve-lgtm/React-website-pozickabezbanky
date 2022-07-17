@@ -700,6 +700,7 @@ const validate = () =>{
           <label htmlFor="dátumDoZamestnania">Dátum nástupu do zamestnania:</label>
           <input
               type="date"
+              placeholder="dd-mm-yyyy"
               name="dátumDoZamestnania"
               id="dátumDoZamestnania"
               onBlur={formik.handleBlur}

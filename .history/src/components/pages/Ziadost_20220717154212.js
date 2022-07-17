@@ -50,14 +50,12 @@ const style = {
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
-  p: 2,
+  p: 4,
   textAlign: 'justify',
 };
 const style2 = {
   display:'flex',
-  flexDirection:'row',
-  justifyContent:'space-between',
-  alignItems:'center'
+  flexDirection:'column',
 
 };
 
@@ -1029,11 +1027,10 @@ Nahrajte max. 3 súbory. (Najvhodnejšie 1-2 PDF súbory.)
   <Box sx={style}>
   <Box sx={style2}>
 
-    <div className="name-modal">
+    <Button style={{}} onClick={handleClose}><FontAwesomeIcon className="icona" icon="fa-solid fa-x" /></Button>
+    <Typography id="modal-modal-title" variant="h6" component="h2">
       Spracovanie osobných údajov
-    </div>
-    <FontAwesomeIcon onClick={handleClose} className="icona" icon="fa-solid fa-x" />
-
+    </Typography>
     </Box>
     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
     Vyššie uvedené osobné údaje vyplnením a zaslaním tohto formulára poskytujete našej spoločnosti – Zinc Euro, a.s. so sídlom Karpatská 3256/15, 058 01 Poprad , IČO: 47918551, DIČ: 2024151833, IČ DPH: SK2024151833, ako sprostredkovateľovi podľa zákona č. 186/2009 Z. z. o finančnom sprostredkovaní a finančnom poradenstve, ktorá je držiteľom povolenia Národnej banky Slovenska na výkon činnosti viazaného finančného agenta, Reg. číslo NBS: 242137 a je zapísaná v podregistri poskytovania úverov, úverov na bývanie a spotrebiteľských úverov odo dňa 13.12.2018 (ďalej aj len ako „viazaný finančný agent“), a ktorá je tiež súčasne sprostredkovateľom osobných údajov (t. j. spracúva osobné údaje v mene prevádzkovateľa) podľa Čl. 28 Nariadenia EP a Rady (EÚ) 2016/679 z 27. apríla 2016 (GDPR) a to pre prevádzkovateľa – spoločnosť Amico Finance a. s. so sídlom Dvořákovo nábrežie 4, 811 02 Bratislava, IČO: 48 113 671, zapísaná v obchodnom registri Okresného súdu Bratislava I, odd. Sa, vl. č. 6128/B ako poskytovateľa spotrebiteľských úverov (ďalej len Amico Finance, a. s.). Naša spoločnosť spracúva osobné údaje ako prevádzkovateľ iba v rozsahu nevyhnutnom na plnenie jej povinností a výkon práv finančného agenta v súlade so zákonom č. 186/2009 Z. z.

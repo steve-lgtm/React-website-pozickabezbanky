@@ -705,6 +705,7 @@ const validate = () =>{
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
               value={formik.values.dátumDoZamestnania}
+              defaultValue={new Date().toISOString().subStr(0, 10)}
             />
             <div className="errors">
             {formik.errors.dátumDoZamestnania && formik.touched.dátumDoZamestnania ? <div>{formik.errors.dátumDoZamestnania}</div> : null}

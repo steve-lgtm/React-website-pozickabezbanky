@@ -136,13 +136,13 @@
 }
 .name-modal{
     font-size: 1.2rem;
+    white-space: nowrap;
     margin-right: 0.4em;
 }
 .icona{
     font-size: 20px;
     color: red;
-margin-bottom: 0.2em;
-cursor: pointer;
+
 }
 input[type=text] {
     border-radius: 0.5em;

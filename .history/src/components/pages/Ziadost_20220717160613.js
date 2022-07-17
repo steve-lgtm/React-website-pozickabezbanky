@@ -700,6 +700,7 @@ const validate = () =>{
           <label htmlFor="dátumDoZamestnania">Dátum nástupu do zamestnania:</label>
           <input
               type="date"
+              defaultValue={new Date().toLocaleDateString('en-CA')}
               name="dátumDoZamestnania"
               id="dátumDoZamestnania"
               onBlur={formik.handleBlur}

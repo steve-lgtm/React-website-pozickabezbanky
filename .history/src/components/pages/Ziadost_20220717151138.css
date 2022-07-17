@@ -134,16 +134,6 @@
     white-space: pre;
 
 }
-.name-modal{
-    font-size: 1.2rem;
-    margin-right: 0.4em;
-}
-.icona{
-    font-size: 20px;
-    color: red;
-margin-bottom: 0.2em;
-cursor: pointer;
-}
 input[type=text] {
     border-radius: 0.5em;
     height: 2.8em;
@@ -201,7 +191,6 @@ input[type=email] {
 color: red;}
 .suhlasim:hover{
     text-decoration: underline;
-    cursor: pointer;
 color: #833ab4
 }
 .errors {

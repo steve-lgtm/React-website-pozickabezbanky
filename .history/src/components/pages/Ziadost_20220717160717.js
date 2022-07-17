@@ -702,6 +702,7 @@ const validate = () =>{
               type="date"
               name="dátumDoZamestnania"
               id="dátumDoZamestnania"
+              value={date.toLocaleDateString('en-CA')}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
               value={formik.values.dátumDoZamestnania}

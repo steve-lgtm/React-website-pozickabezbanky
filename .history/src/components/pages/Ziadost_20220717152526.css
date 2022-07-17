@@ -134,16 +134,7 @@
     white-space: pre;
 
 }
-.name-modal{
-    font-size: 1.2rem;
-    margin-right: 0.4em;
-}
-.icona{
-    font-size: 20px;
-    color: red;
-margin-bottom: 0.2em;
-cursor: pointer;
-}
+fa-solid fa-x
 input[type=text] {
     border-radius: 0.5em;
     height: 2.8em;

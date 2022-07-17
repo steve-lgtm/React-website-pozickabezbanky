@@ -50,14 +50,12 @@ const style = {
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
-  p: 2,
+  p: 4,
   textAlign: 'justify',
 };
 const style2 = {
   display:'flex',
   flexDirection:'row',
-  justifyContent:'space-between',
-  alignItems:'center'
 
 };
 
@@ -1029,10 +1027,10 @@ Nahrajte max. 3 súbory. (Najvhodnejšie 1-2 PDF súbory.)
   <Box sx={style}>
   <Box sx={style2}>
 
-    <div className="name-modal">
+    <Typography id="modal-modal-title" variant="h8" component="h2">
       Spracovanie osobných údajov
-    </div>
-    <FontAwesomeIcon onClick={handleClose} className="icona" icon="fa-solid fa-x" />
+    </Typography>
+    <Button style={{}} onClick={handleClose}><FontAwesomeIcon className="icona" icon="fa-solid fa-x" /></Button>
 
     </Box>
     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
