@@ -32,7 +32,7 @@ function HeroSection() {
 
         </Button>
       </div>
-      <div className='viac-info'>Požičiame Vám bez akýchkoľvek poplatkov za vybavenie. Peniaze sú na vašom účte už do 24h od schválenia pôžičky.</div>
+      <p className='info'>Požičiame Vám bez akýchkoľvek poplatkov za vybavenie. Peniaze sú na vašom účte už do 24h od schválenia pôžičky.</p>
 
     </div>
   );

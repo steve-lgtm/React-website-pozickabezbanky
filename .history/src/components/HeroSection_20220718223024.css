@@ -71,7 +71,6 @@ video {
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .hero-container > h1 {
     font-size: 45px;
@@ -93,19 +92,7 @@ video {
     width: 100%;
   }
   .viac-info{
-    font-size: 1rem;
-    color:white;
-    text-align: center;
-    margin-top: 1.5em;
-    width: 30em;
-    margin-left: 0.7em;
-    margin-right: 0.7em;
-  }
-}
-@media screen and (max-width: 510px) {
-
-  .viac-info{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color:white;
     text-align: center;
     margin-top: 1.5em;

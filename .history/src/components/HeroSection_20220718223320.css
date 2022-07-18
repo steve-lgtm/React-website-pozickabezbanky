@@ -102,14 +102,32 @@ video {
     margin-right: 0.7em;
   }
 }
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 768px) {
+  .hero-container > h1 {
+    font-size: 45px;
+    margin-top: -150px;
+    margin-bottom: 0.3em;
+    padding: 0 0.2em;
+  }
 
+  .hero-container > p {
+    font-size: 22px;
+  }
+
+  .btn-mobile {
+    display: block;
+    text-decoration: none;
+  }
+
+  .btn {
+    width: 100%;
+  }
   .viac-info{
-    font-size: 0.7rem;
+    font-size: 1rem;
     color:white;
     text-align: center;
     margin-top: 1.5em;
-    width: auto;
+    width: 30em;
     margin-left: 0.7em;
     margin-right: 0.7em;
   }

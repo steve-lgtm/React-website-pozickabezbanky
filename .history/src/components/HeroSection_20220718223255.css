@@ -102,15 +102,3 @@ video {
     margin-right: 0.7em;
   }
 }
-@media screen and (max-width: 510px) {
-
-  .viac-info{
-    font-size: 0.7rem;
-    color:white;
-    text-align: center;
-    margin-top: 1.5em;
-    width: auto;
-    margin-left: 0.7em;
-    margin-right: 0.7em;
-  }
-}

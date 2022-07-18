@@ -31,9 +31,9 @@ function HeroSection() {
           <FontAwesomeIcon icon="fa-solid fa-pen-clip" className='write-icon'/>
 
         </Button>
-      </div>
-      <div className='viac-info'>Požičiame Vám bez akýchkoľvek poplatkov za vybavenie. Peniaze sú na vašom účte už do 24h od schválenia pôžičky.</div>
+        <p>Nezúfajte vyskúšajte to u nás!</p>
 
+      </div>
     </div>
   );
 }
