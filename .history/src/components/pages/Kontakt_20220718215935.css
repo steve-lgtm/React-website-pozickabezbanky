@@ -27,7 +27,6 @@ video {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 0.5em;
-    margin-top: 0.5em;
   }
 
   .write-icon{
@@ -38,6 +37,7 @@ video {
   .hero-container-contact > .contact-number > p {
     text-align: center;
     margin-top: 8px;
+    margin-bottom: 0.8em;
     color: #fff;
     font-size: 32px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
