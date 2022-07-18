@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function HeroSection() {
   return (
     <div className='hero-container'>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
+      <video src='/videos/video-7.mp4' autoPlay loop muted />
       <h1>Neschválili Vám pôžičku v banke?</h1>
       <p>Nezúfajte vyskúšajte to u nás!</p>
       <div className='hero-btns'>
