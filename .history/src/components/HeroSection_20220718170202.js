@@ -22,7 +22,6 @@ function HeroSection() {
         </Button>
         <Button
           className='btns'
-          to={'/ziadost'}
           buttonStyle='btn--primary'
           buttonSize='btn--large'
           onClick={console.log('hey')}

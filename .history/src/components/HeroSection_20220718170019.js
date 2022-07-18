@@ -16,13 +16,11 @@ function HeroSection() {
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
-          to={'kontakt'}
         >
-          KONTAKT
+          GET STARTED
         </Button>
         <Button
           className='btns'
-          to={'/ziadost'}
           buttonStyle='btn--primary'
           buttonSize='btn--large'
           onClick={console.log('hey')}

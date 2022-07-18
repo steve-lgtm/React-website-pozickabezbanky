@@ -2,8 +2,6 @@ import React from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 
 function HeroSection() {
   return (
@@ -16,19 +14,17 @@ function HeroSection() {
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
-          to={'kontakt'}
         >
-          KONTAKT
+          GET STARTED
         </Button>
         <Button
           className='btns'
-          to={'/ziadost'}
           buttonStyle='btn--primary'
           buttonSize='btn--large'
           onClick={console.log('hey')}
         >
           ŽIADOSŤ O PÔŽIČKU
-          <FontAwesomeIcon icon="fa-solid fa-pen-clip" className='write-icon'/>
+          <FontAwesomeIcon icon="fa-solid fa-pen-to-square" />
 
         </Button>
       </div>

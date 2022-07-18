@@ -31,7 +31,6 @@ video {
 }
 
 .hero-container > p {
-  text-align: center;
   margin-top: 8px;
   color: #fff;
   font-size: 32px;
@@ -61,8 +60,7 @@ video {
 @media screen and (max-width: 768px) {
   .hero-container > h1 {
     font-size: 50px;
-    margin-top: -100px;
-    margin-bottom: 0.3em;
+    margin-top: -150px;
   }
 
   .hero-container > p {
