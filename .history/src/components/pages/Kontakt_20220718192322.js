@@ -1,0 +1,32 @@
+import React, {useState, useRef} from 'react'
+import styled from 'styled-components'
+import '../../App.css';
+import { useFormik} from 'formik';
+import './Kontakt.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Button } from '../Button';
+
+
+
+
+const Kontakt = () => {
+    return (
+        <div className='hero-container-contact'>
+        <video src='/videos/video-10.mp4' autoPlay loop muted />
+        <div className='contact-number'>
+        <h1>Telefonné číslo:</h1>
+        <h1>0940 838 058</h1>
+
+
+        </div>
+        <div className='contact-number'>
+        <h1>Telefonné číslo:</h1>
+
+        <h1>0940 838 058</h1>
+
+        </div>
+      </div>
+ );
+}
+
+export default Kontakt
