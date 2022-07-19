@@ -1,0 +1,414 @@
+
+.container-form {
+    margin: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.spinner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.spinner::before,
+.spinner:after{
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+}
+.spinner:before {
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(
+        0deg, #ff00cc 0%,
+        #333399 100% );
+    animation: spin .5s infinite linear;
+}
+.spinner:after {
+    width: 85%;
+    height: 85%;
+    background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+.pullleft{
+    margin-top:0.3em;
+    margin-bottom: 0.3em;
+    float: left;
+}
+.pullright{
+    margin-top:0.3em;
+    margin-bottom: 0.3em;
+    float: right;
+}
+.containerslider {
+    width: 90vw;
+    margin-bottom: 1em;
+}
+.header-form {
+    text-align: center;
+    font-size: 1rem;
+    padding: 1em;
+    padding-top: 1.5em;
+}
+.info{
+    font-size: 1rem;
+    color:black;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.info2{
+    font-size: 0.8rem;
+    color:black;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    background: #021391;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 1em;
+
+  }
+.section-name {
+    align-self: flex-start;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+
+}
+.form > .section-name {
+    align-self: flex-start;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+}
+.section-name-zamestnanie {
+    align-self: flex-start;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+    display: none;
+}
+.section-name-prijem{
+    align-self: flex-start;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+.no-wrap{
+    white-space: nowrap;
+}
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #000000;
+    cursor: pointer;
+  }
+.arrow{
+    width: 70px;
+    margin-bottom: -1em;
+}
+
+.personal-data{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin: 0.5em;
+}
+.dorucovacia-adresa{
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin: 0.5em;
+    display: none;
+}
+.personal-data-field{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    height: 5.5em;
+    margin: 0 1em;
+    font-weight: 300;
+
+}
+.if-employ{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    height: 5.5em;
+    margin: 0 1em;
+    font-weight: 300;
+}
+.if-employ-section{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin: 0.5em;
+    display: none;
+
+}
+.prechodne-bydlisko-field{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin-bottom: 1em;
+}
+.prechodne-bydlisko-field-suhlas-error{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    white-space: pre;
+
+}
+.name-modal{
+    font-size: 1.2rem;
+    margin-right: 0.4em;
+}
+.name-modalis{
+    font-size: 1.2rem;
+    margin-right: 0.4em;
+    text-align: center;
+    margin-top: 1em;
+}
+.icona{
+    font-size: 20px;
+    color: red;
+margin-bottom: 0.2em;
+cursor: pointer;
+}
+input[type=text] {
+    border-radius: 0.5em;
+    height: 2.8em;
+    padding: 8px 10px;
+    border-width: 2px;
+}
+input[type=date] {
+    border-radius: 0.5em;
+    height: 2.8em;
+    padding: 8px 10px;
+    border-width: 2px;
+}
+input[type=checkbox] {
+   height: 18px;
+   width: 18px;
+   margin-right: 1em;
+
+}
+input[type=email] {
+    border-radius: 0.5em;
+    height: 3em;
+    padding: 8px 10px;
+}
+.files-container {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    margin: 0.5em;
+}
+.input-file-field {
+   margin: 0 1em;
+}
+
+.input-file-field-name {
+    margin: 0 1em;
+    margin-bottom: 0.8em;
+    font-weight: 600;
+    font-size: 1.1rem;
+ }
+ .input-file-field-name:after {
+    content: ' (Povinné)';
+    font-size: 0.5em;
+    font-weight: 400;
+
+ }
+ .input-file-field-name-nepovinne{
+    margin: 0 1em;
+    margin-bottom: 0.8em;
+    font-weight: 600;
+    font-size: 1.1rem;
+ }
+ .input-file-field-name-nepovinne:after{
+    content: ' (Nepovinné)';
+    font-size: 0.5em;
+    font-weight: 400;
+ }
+ .input-file-field-text {
+    margin: 0 1em;
+    margin-bottom: 1em;
+    font-size: 0.9rem;
+    text-align: justify;
+ }
+ .input-file-field-text-upload {
+    margin: 0 1em;
+    margin-bottom: 1em;
+    font-size: 0.7rem;
+    text-align: center;
+ }
+
+.suhlasim{
+    text-decoration: underline;
+color: red;}
+.suhlasim:hover{
+    text-decoration: underline;
+    cursor: pointer;
+color: #833ab4
+}
+.errors {
+    height: 1em;
+    font-size: 0.7rem;
+    padding-left: 0.5em;
+    margin-bottom: 0.2em;
+    color: red;
+}
+.error-file-size {
+    height: 1.5em;
+    font-size: 1rem;
+    padding-left: 0.5em;
+    margin-top: 0.5em;
+    color: red;
+    text-align: center;
+}
+.error-final{
+    height: 1.5em;
+    font-size: 1rem;
+    padding-left: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    color: red;
+    text-align: center;
+    display: none;
+}
+.error-file-required {
+    height: 2em;
+    font-size: 1rem;
+    padding-left: 0.5em;
+    margin-bottom: 0.2em;
+    margin-top: 0.5em;
+    color: red;
+    text-align: center;
+}
+.dzu-previewButton {
+padding-right:5em}
+
+.submit-button{
+    text-align: center;
+    margin-bottom: 1em;
+}
+.final-errors{
+    text-align: center;
+    margin-bottom: 3em;
+
+}
+.tlacidlo {
+    height: 4em;
+    width: 10em
+}
+
+button, button:focus{
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+  }
+
+  button:active{
+    outline: none;
+    background: transparent;
+    border: 1px solid grey;
+  }
+.button{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(23, 175, 46);
+    outline: 2px solid rgb(0, 0, 0);
+    padding: 15px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+    font-weight: 400;
+}
+
+.button:hover{
+    color: #833ab4;
+}
+
+.button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 150%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    transform: scaleX(0) skewX(35deg);
+    transform-origin: left;
+    z-index: -1;
+    transition: transform 1s;
+}
+
+.button:hover::before{
+    transform: scaleX(1) skewX(35deg);
+}
+
+@media screen and (min-width: 510px) {
+    .container-form{
+        width: 33em;
+    }
+    .containerslider{
+        width: 31em;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    align-items: center;}
+    .personal-data{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    form > .section-name{
+        margin-left: 1em;
+    }
+    .section-name-prijem{
+        margin-left: 1em;
+    }
+    .personal-data-field{
+        width: 14em;
+        margin: 0 0;
+    }
+    .if-employ-section{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    form > .section-name-zamestnanie{
+        margin-left: 1em;
+    }
+}
