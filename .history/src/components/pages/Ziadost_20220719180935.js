@@ -80,7 +80,7 @@ const style3 = {
 export default function Ziadost() {
   const [mounthsuma, setMounthsuma] = useState(95.48);
   const scriptUrl =
-    "https://script.google.com/macros/s/AKfycbwFrVMfPXQo77pUIz76YVKTX7scHxDA4paseIagizaAHQQvxuikgk6bI641FmzLuxw/exec";
+    "https://script.google.com/macros/s/AKfycbzI69xGdhttps://script.google.com/macros/s/AKfycbwXjeL3dLFWxH-Fryaj_z2AUCaum0D2ytlYz8g7o6cXf2aywHT6wphdxGkOrxLyUBg/execz3Qnr-IInHExOFJy53Z2E8pZNysrIgMPGlZHNj8vNMlCXsVBDFpDai60BmISg/exec";
   const [loading, setLoading] = useState(false);
   const [isValidate, setIsValidate] = useState(false);
   const [suhlasOU, setSuhlasOU] = useState(false);
@@ -139,7 +139,7 @@ export default function Ziadost() {
     },
     validate: (values) => {
       let errors = {};
-/*
+
       if (!values.meno) {
         errors.meno = "Povinné pole!";
       }
@@ -236,7 +236,7 @@ export default function Ziadost() {
       if (values.file234 === 3) {
         errors.file234 = "Nahrajte maximálne 3 súbory!";
       }
-*/
+
       return errors;
     },
   });

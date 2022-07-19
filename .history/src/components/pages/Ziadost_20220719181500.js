@@ -80,7 +80,7 @@ const style3 = {
 export default function Ziadost() {
   const [mounthsuma, setMounthsuma] = useState(95.48);
   const scriptUrl =
-    "https://script.google.com/macros/s/AKfycbwFrVMfPXQo77pUIz76YVKTX7scHxDA4paseIagizaAHQQvxuikgk6bI641FmzLuxw/exec";
+    "https://script.google.com/macros/s/AKfycbyivoeHTrnMEXQdF7rDnH48hlTGAYIEGb_VnsXiTsmEUVvhuOawfZKsiuJQ3XVPSM4/exec";
   const [loading, setLoading] = useState(false);
   const [isValidate, setIsValidate] = useState(false);
   const [suhlasOU, setSuhlasOU] = useState(false);
