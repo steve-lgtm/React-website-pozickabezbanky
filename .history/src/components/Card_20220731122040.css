@@ -1,0 +1,22 @@
+
+.card-home-section {
+    background-color: white;
+
+}
+.card-home-title {
+    text-align: center;
+    padding: 1em;
+    font-size: 2rem;
+}
+.card-container {
+display: flex;
+justify-content: center;
+}
+.card-item{
+    background-color: brown;
+    padding: 1em;
+    text-align: center;
+}
+.card-item > .title {
+    font-size: 1.2rem;
+}

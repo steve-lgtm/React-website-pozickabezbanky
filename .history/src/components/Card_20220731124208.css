@@ -1,0 +1,26 @@
+
+.card-home-section {
+    background-color: white;
+
+}
+.card-home-title {
+    text-align: center;
+    padding: 1em;
+    font-size: 2rem;
+}
+.card-container {
+display: flex;
+justify-content: space-around;
+}
+.card-item{
+    background-color: brown;
+    padding: 1em;
+    text-align: center;
+    margin: 1em;
+}
+.card-item > .title {
+    font-size: 1.2rem;
+}
+.card-item > .body {
+    font-size: 0.8rem;
+}
