@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Onas() {
   return (
     <>
-    <div className="onas-body">
+    <div className="onas-body"></div>
       <div className="onas-container">
         <div className="onas-item-title">
           Sme dlhoročná a overená spoločnosť pôsobiaca v oblasti
@@ -57,7 +57,6 @@ export default function Onas() {
             </li>
           </ul>
         </div>
-      </div>
       </div>
     </>
   );

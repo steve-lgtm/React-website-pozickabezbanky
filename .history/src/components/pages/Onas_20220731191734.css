@@ -155,7 +155,7 @@ font-size: 1.5rem;
         padding: 1.5em;
         font-weight: 100;
         text-align: center;
-        height: 100%;
+        height: auto;
         display: flex;
         align-items: center;
         font-size: 1rem;
@@ -175,8 +175,5 @@ font-size: 1.5rem;
         align-items: center;
 
 
-    }
-    .onas-body{
-        height: 22.9em;
     }
   }

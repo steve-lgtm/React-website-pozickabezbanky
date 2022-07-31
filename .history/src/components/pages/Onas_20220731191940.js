@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Onas() {
   return (
     <>
-    <div className="onas-body">
       <div className="onas-container">
         <div className="onas-item-title">
           Sme dlhoročná a overená spoločnosť pôsobiaca v oblasti
@@ -25,12 +24,7 @@ export default function Onas() {
         </div>
       </div>
       <div className="onas-container-info">
-        <div className="onas-text">
-          Spolupracujeme s top 4 najlepšími nebankovkami na Slovensku a
-          súkromným investorom. Hľadáme pre klienta to najvýhodnejšie a
-          najlepšie riešenie v jeho aktuálnej finančej situácií.
-        </div>
-        <div className="who-can">
+      <div className="who-can">
           Kto si môže požiadať o pôžičku:
           <ul>
             <li>
@@ -57,7 +51,8 @@ export default function Onas() {
             </li>
           </ul>
         </div>
-      </div>
+
+
       </div>
     </>
   );
