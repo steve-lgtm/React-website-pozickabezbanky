@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Kontakt from "./components/pages/Kontakt";
 import Products from "./components/pages/Products";
 import Ziadost from "./components/pages/Ziadost";
-import Onas from "./components/pages/Onas";
 import Dakujeme from "./components/pages/Dakujeme";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -20,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/kontakt" element={<Kontakt />} />
-        <Route path="/onas" element={<Onas />} />
+        <Route path="/onas" element={<Products />} />
         <Route path="/ziadost" element={<Ziadost />} />
         <Route path="/dakujeme" element={<Dakujeme />} />
       </Routes>

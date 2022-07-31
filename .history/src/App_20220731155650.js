@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Kontakt from "./components/pages/Kontakt";
 import Products from "./components/pages/Products";
 import Ziadost from "./components/pages/Ziadost";
-import Onas from "./components/pages/Onas";
 import Dakujeme from "./components/pages/Dakujeme";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
