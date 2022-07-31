@@ -1,0 +1,52 @@
+.onas-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent
+}
+.onas-container-info{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(70, 70, 70);
+    height: 49vh;
+    z-index: 1;
+
+}
+.image-text{
+    background: transparent;
+}
+.onas-item-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 40vh;
+    width: 50vw;
+    background-color: rgb(21, 21, 21);
+    font-size: 2rem;
+    padding: 1em;
+    text-align: center;
+    font-weight: 100;
+}
+.onas-item-body{
+    text-align: center;
+    width: 50vw;
+    height: 40vh;
+    z-index: -1;
+    position: relative;
+
+}
+.center{
+    position: absolute;
+
+}
+.onas-item-body > img{
+    width: 100%;
+  height: 19em;
+object-fit: cover;
+filter: brightness(40%);}

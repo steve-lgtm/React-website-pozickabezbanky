@@ -1,0 +1,23 @@
+.onas-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white
+}
+.onas-item-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(67, 46, 79);
+    height: 50vh;
+    width: 50vw;
+    background-color: rgb(62, 57, 57);
+}
+.onas-item-body{
+    text-align: center;
+    width: 50vw;
+    height: 50vh;
+
+}
