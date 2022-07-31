@@ -29,7 +29,7 @@ flex-direction: column;
     justify-content: center;
 }
 .card-item > .body {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: justify;
     padding: 1em;
 }
@@ -46,7 +46,7 @@ border-radius: 5px 5px 0px 0px;
     .card-container {
         justify-content: space-around;
         flex-direction: row;
-        margin: 0 1em;
+        margin: 0 em;
         }
         .card-item > .title {
             font-size: 1.3rem;

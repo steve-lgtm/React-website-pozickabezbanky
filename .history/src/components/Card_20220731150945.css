@@ -29,7 +29,7 @@ flex-direction: column;
     justify-content: center;
 }
 .card-item > .body {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: justify;
     padding: 1em;
 }

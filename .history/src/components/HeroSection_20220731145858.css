@@ -34,6 +34,7 @@ video {
 .hero-container > h1 {
   color: #fff;
   font-size: 4rem;
+  margin-top: -100px;
   text-align: center;
 }
 
