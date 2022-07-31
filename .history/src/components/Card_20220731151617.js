@@ -24,7 +24,7 @@ export default function Card() {
             <div className="title">2. VYHODNOTENIE ŽIADOSTI</div>
             <div className="body">
               Vašu žiadosť posúdime a o výsledku Vás budeme informovať. Po
-              schválení pôžičky Vám zašleme zmluvu na podpis.
+              schválení pôžičky Vám zašleme zmluvu na podpis splátkový kalendár.
             </div>
           </div>
           <div className="card-item">
