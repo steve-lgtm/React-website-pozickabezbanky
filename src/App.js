@@ -11,6 +11,7 @@ import Dakujeme from "./components/pages/Dakujeme";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
+
 library.add(fas);
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
         <Route path="/dakujeme" element={<Dakujeme />} />
       </Routes>
     </Router>
-  );
+  )
 }
 
 export default App;

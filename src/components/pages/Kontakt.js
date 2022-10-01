@@ -5,7 +5,6 @@ import "./Kontakt.css";
 const Kontakt = () => {
   return (
     <div className="hero-container-contact">
-      <video src="/videos/video-10.mp4" autoPlay loop muted />
       <div className="contact-number">
         <h1>Telefonné číslo:</h1>
         <p>0940 838 058</p>

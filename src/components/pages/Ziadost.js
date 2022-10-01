@@ -570,9 +570,10 @@ const onTargetClick = () => {
       <h1 className="header-form">
         Vyplňte formulár pre nezáväznu žiadosť o pôžičku.
       </h1>
-      <div className="input-file-field-text-upload">
-        Pôžičku nevieme schváliť, ak máte záznam v registri exekúcií a dlžníkov.
+      {/*<div className="input-file-field-text-upload">
+       Upozornenie! Pôžičku nevieme schváliť, ak máte záznam v registri exekúcií a dlžníkov alebo ste po osobnom bankrote.
       </div>
+  */}
       <form onSubmit={formik.handleSubmit} ref={formRef} name="google-sheet">
         <div className="container-form">
           <div className="rozdel">
@@ -720,7 +721,7 @@ const onTargetClick = () => {
           <div className="personal-data-field">
             <label htmlFor="datumOP">Platnosť občianského preukazu:</label>
             <input
-              type="date"
+              type="text"
               name="datumOP"
               id="datumOP"
               onBlur={formik.handleBlur}

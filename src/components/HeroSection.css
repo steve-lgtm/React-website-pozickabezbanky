@@ -14,7 +14,9 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.33);
+  background: #56ccf2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #56ccf2, #2f80ed); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #56ccf2, #2f80ed);
   object-fit: contain;
 }
 .viac-info {
