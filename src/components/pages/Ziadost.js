@@ -123,20 +123,6 @@ export default function Ziadost() {
       deti: "",
       suhlas: false,
     },
-
-    onSubmit: (values) => {
-      setLoading(true);
-
-      fetch(scriptUrl, {
-        method: "POST",
-        body: new FormData(formRef.current),
-      })
-        .then((res) => {
-          console.log("SUCCESSFULLY SUBMITTED");
-          navigate("/dakujeme");
-        })
-        .catch((err) => console.log(err));
-    },
     validate: (values) => {
       let errors = {};
 
@@ -244,10 +230,22 @@ export default function Ziadost() {
 
       return errors;
     },
+    onSubmit: (values) => {
+
+      setLoading(true);
+      fetch(scriptUrl, {
+        method: "POST",
+        body: new FormData(formRef.current),
+      })
+        .then((res) => {
+          navigate("/dakujeme");
+        })
+        .catch((err) => console.log(err));
+    },
+
   });
   useEffect(() => {
     setIsValidate(formik.isValid);
-    console.log(formik.isValid, "use efeeects");
   }, [formik.isValid]);
   useEffect(() => {
     showIfEmploy();
@@ -322,7 +320,6 @@ const onTargetClick = () => {
     const reader = new FileReader();
     reader.readAsDataURL(files[0].file);
     reader.onload = function (e) {
-      console.log(e.target.result);
       let fileData = e.target.result.substr(e.target.result.indexOf(",") + 1);
       let mimeTypeStart = e.target.result.indexOf("data:") + 5;
       let mimeTypeEnd = e.target.result.indexOf(";");
@@ -351,7 +348,6 @@ const onTargetClick = () => {
     const reader = new FileReader();
     reader.readAsDataURL(files[0].file);
     reader.onload = function (e) {
-      console.log(e.target.result);
       let fileData = e.target.result.substr(e.target.result.indexOf(",") + 1);
       let mimeTypeStart = e.target.result.indexOf("data:") + 5;
       let mimeTypeEnd = e.target.result.indexOf(";");
@@ -380,18 +376,15 @@ const onTargetClick = () => {
     formik.setFieldTouched("file234", true);
     formik.setFieldValue("file234", "");
     for (let i = 0; i < files.length; i++) {
-      console.log(files.length);
       if (files[i].file.size > 15728640) {
         formik.setFieldValue("file234", 1);
         return;
       }
     }
     for (let i = 2; i < files.length + 2; i++) {
-      console.log(files[i - 2]);
       const reader = new FileReader();
       reader.readAsDataURL(files[i - 2].file);
       reader.onload = function (e) {
-        console.log(e.target.result);
         let fileData = e.target.result.substr(e.target.result.indexOf(",") + 1);
         let mimeTypeStart = e.target.result.indexOf("data:") + 5;
         let mimeTypeEnd = e.target.result.indexOf(";");
@@ -472,7 +465,6 @@ const onTargetClick = () => {
       dorucovaciaAdresa.style.display = "none";
       namedorucovaciaAdresa.style.display = "none";
     }
-    console.log(prechodneByvanie);
   };
   const suhlas = () => {
     formik.setFieldTouched("suhlas", true);
@@ -526,7 +518,6 @@ const onTargetClick = () => {
       body: new FormData(formRef.current),
     })
       .then((res) => {
-        console.log("SUCCESSFULLY SUBMITTED");
         setLoading(false);
       })
       .catch((err) => console.log(err));
@@ -570,10 +561,11 @@ const onTargetClick = () => {
       <h1 className="header-form">
         Vyplňte formulár pre nezáväznu žiadosť o pôžičku.
       </h1>
-      {/*<div className="input-file-field-text-upload">
-       Upozornenie! Pôžičku nevieme schváliť, ak máte záznam v registri exekúcií a dlžníkov alebo ste po osobnom bankrote.
+     <div className="input-file-field-text-upload">
+      <div className="linear-wipe">
+       Upozornenie! Pôžičku nevieme schváliť, ak máte exekúciu alebo ste po osobnom bankrote.
       </div>
-  */}
+      </div>
       <form onSubmit={formik.handleSubmit} ref={formRef} name="google-sheet">
         <div className="container-form">
           <div className="rozdel">
@@ -960,7 +952,7 @@ const onTargetClick = () => {
         </div>
 
         <div className="prechodne-bydlisko-field">
-          <input type="checkbox" onChange={showPrechodneByvanie} />
+          <input type="checkbox" style={{marginLeft:"1em"}} onChange={showPrechodneByvanie} />
           Chcem doručovať poštu na inú adresu.
         </div>
         <div className="section-name-doruc">Doručovacia adresa</div>
@@ -1007,7 +999,7 @@ const onTargetClick = () => {
           <div className="personal-data-field">
             <label htmlFor="mobil">Mobil:</label>
             <input
-              type="text"
+              type="tel"
               name="mobil"
               id="mobil"
               onBlur={formik.handleBlur}
@@ -1023,7 +1015,7 @@ const onTargetClick = () => {
           <div className="personal-data-field">
             <label htmlFor="email">Email:</label>
             <input
-              type="text"
+              type="email"
               name="email"
               id="email"
               onBlur={formik.handleBlur}
@@ -1038,8 +1030,7 @@ const onTargetClick = () => {
           </div>
         </div>
         <div className="section-name-prijem">
-          Čistý mesačný príjem{" "}
-          <div className="no-wrap">za posledné 3 mesiace</div>
+          Čistý mesačný príjem za posledné 3 mesiace
         </div>
 
         <div className="personal-data">

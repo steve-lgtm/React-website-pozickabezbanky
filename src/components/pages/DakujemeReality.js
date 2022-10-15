@@ -1,17 +1,16 @@
 import React, { useState, useRef } from "react";
-import "./Dakujeme.css";
 import { Button } from "../Button";
 import { Link } from "react-router-dom";
 
-const Dakujeme = () => {
+const DakujemeReality = () => {
   return (
     <>
       <div className="container">
         <div className="card">
-          <div className="card-plan">Žiadosť bola úspešne odoslaná !</div>
-          <div className="card-title2">Ďakujeme za podanie žiadosti. </div>
+          <div className="card-plan">Kontaktný formulár bol úspešne odoslaný!</div>
+          <div className="card-title2">Ďakujeme! </div>
           <div className="card-title">
-            Žiadosť je aktuálne v schvaľovacom procese a čoskoro Vás budeme
+            Obdržali sme kontaktný formulár a čoskoro Vás budeme
             kontaktovať mailom alebo telefonicky.
           </div>
           <Button buttonSize={"btn--large"} to={"/"} buttonStyle="btn--outline">
@@ -23,4 +22,4 @@ const Dakujeme = () => {
   );
 };
 
-export default Dakujeme;
+export default DakujemeReality;

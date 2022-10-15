@@ -10,7 +10,19 @@
   z-index: 999;
   font-weight: 400;
 }
-
+.novinka{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 4em;
+  z-index: 999;
+  background-color: rgb(158, 130, 66);
+  cursor: pointer;
+  text-align: center;
+padding: 0.4em;
+}
 .navbar-container {
   display: flex;
   justify-content: center;
@@ -75,6 +87,35 @@
 
 .menu-icon {
   display: none;
+}
+@media screen and (max-width: 470px) {
+  .novinka{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    position: sticky;
+    top: 7em;
+    z-index: 999;
+    background-color: rgb(158, 130, 66);
+    cursor: pointer;
+    text-align: center;
+  padding: 0.5em;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .navbar-logo {
+    color: #fff;
+    justify-self: start;
+    margin-left: 0.5em;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
 }
 
 @media screen and (max-width: 1040px) {

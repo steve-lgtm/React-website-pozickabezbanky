@@ -3,6 +3,8 @@ import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
+
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -10,6 +12,7 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  const navigate = useNavigate();
 
   const showButton = () => {
     if (window.innerWidth <= 1040) {
@@ -41,7 +44,7 @@ function Navbar() {
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
+            <li className="nav-item">
               <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 Domov
               </Link>
@@ -60,6 +63,15 @@ function Navbar() {
                 Kontakt
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                to="/predanieBytu"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Predať byt
+              </Link>
+            </li>
 
             <li>
               <Link
@@ -76,8 +88,13 @@ function Navbar() {
               ŽIADOSŤ O PÔŽIČKU
             </Button>
           )}
+
         </div>
+
       </nav>
+      <div className="novinka" onClick={()=>navigate("/predanieBytu")}>
+        Chcete predať byt? Odkúpime ho od Vás! Pre viac informácií klinite sem.
+      </div>
     </>
   );
 }

@@ -1,0 +1,29 @@
+.form-container{
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 50em;
+    display:flex;
+
+}
+
+@media screen and (max-width: 850px) {
+    .form-container{
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: auto;
+        display:flex;
+
+    }
+  }
+  @media screen and (max-width: 530px) {
+    .form-container{
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: auto;
+        display:flex;
+
+    }
+  }

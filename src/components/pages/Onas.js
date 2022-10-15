@@ -26,7 +26,7 @@ export default function Onas() {
       </div>
       <div className="onas-container-info">
         <div className="onas-text">
-          Spolupracujeme s top 4 najlepšími nebankovkami na Slovensku a
+          Spolupracujeme s top najlepšími nebankovkami na Slovensku a
           súkromným investorom. Hľadáme pre klienta to najvýhodnejšie a
           najlepšie riešenie v jeho aktuálnej finančej situácií.
         </div>
