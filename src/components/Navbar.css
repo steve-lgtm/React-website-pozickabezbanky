@@ -40,6 +40,8 @@ padding: 0.4em;
   font-size: 1.6rem;
   display: flex;
   align-items: center;
+  white-space: nowrap;
+
 }
 
 .nav-icon {
@@ -70,6 +72,7 @@ padding: 0.4em;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+  font-size: 1rem;
 }
 
 .nav-links:hover {
@@ -134,6 +137,7 @@ padding: 0.4em;
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
+    paddinge-top: 1.9em;
   }
 
   .nav-menu.active {
@@ -202,5 +206,13 @@ padding: 0.4em;
     background: #fff;
     color: #242424;
     transition: 250ms;
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1040px) {
+  .nav-menu {
+
+    width: 40vw;
+
   }
 }

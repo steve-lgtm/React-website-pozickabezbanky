@@ -29,7 +29,6 @@ function HeroSection() {
           to={"/ziadost"}
           buttonStyle="btn--primary"
           buttonSize="btn--large"
-          onClick={console.log("hey")}
         >
           ŽIADOSŤ O PÔŽIČKU
           <FontAwesomeIcon icon="fa-solid fa-pen-clip" className="write-icon" />
@@ -38,14 +37,25 @@ function HeroSection() {
 
       <div className="viac-info">
         Požičiame Vám bez akýchkoľvek poplatkov za vybavenie. Peniaze sú na
-        vašom účte už do 24h od schválenia pôžičky.
+        vašom účte už do 24h od schválenia pôžičky. Nájdeme riešenie aj tam, kde banka už nemôže.
+
+      </div>
+      <div className="viac-info">
+
+      Pôžička až do 25 000 €.
+</div>
+      <div className="viac-info poplatky">
+      <div className="input-file-field-text-upload">
+      <div className="linear-wipe">
+      Žiadne poplatky.      </div>
+      </div>
       </div>
       <div className="vedla" onClick={handleClick}>
       <div className="viac-info-scroll" >
-        Viac informácií
+        VIAC INFORMÁCIÍ
     </div>
-    <div class="arrow bounce">
-  <a  class="fa fa-arrow-down fa-sm" href="#"></a>
+    <div className="arrow bounce">
+  <a  className="fa fa-arrow-down fa-sm" href="#"></a>
 </div>
 </div>
 

@@ -232,6 +232,7 @@ export default function Reality() {
               type="text"
               name="adresa"
               id="adresa"
+              placeholder="Ulica, Súpisné číslo, Mesto/Obec"
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
               value={formik.values.adresa}

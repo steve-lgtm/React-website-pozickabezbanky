@@ -13,6 +13,7 @@ import * as React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
+
 function PMT(ir, np, pv, fv, type) {
   //  * ir   - interest rate per month
   //  * np   - number of dobas (months)
@@ -255,6 +256,11 @@ export default function Ziadost() {
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+
+  const onChange = (value) =>{
+    console.log("Captcha value:", value);
+  }
 
   /*const fileInputRef = useRef(null);
 const onFileInputChange = (event) => {
@@ -561,11 +567,6 @@ const onTargetClick = () => {
       <h1 className="header-form">
         Vyplňte formulár pre nezáväznu žiadosť o pôžičku.
       </h1>
-     <div className="input-file-field-text-upload">
-      <div className="linear-wipe">
-       Upozornenie! Pôžičku nevieme schváliť, ak máte exekúciu alebo ste po osobnom bankrote.
-      </div>
-      </div>
       <form onSubmit={formik.handleSubmit} ref={formRef} name="google-sheet">
         <div className="container-form">
           <div className="rozdel">
@@ -1092,9 +1093,10 @@ const onTargetClick = () => {
         <div className="personal-data">
           <div className="personal-data-field">
             <label htmlFor="IBAN">
-              IBAN (Účet, kde chcete čerpať pôžičku):
+              IBAN:
             </label>
             <input
+            placeholder="Účet, kde chcete čerpať pôžičku"
               type="text"
               name="IBAN"
               id="IBAN"
@@ -1243,6 +1245,7 @@ const onTargetClick = () => {
             <div>{formik.errors.suhlas}</div>
           ) : null}
         </div>
+
 
         <Modal
           open={open}

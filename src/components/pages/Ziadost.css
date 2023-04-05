@@ -11,7 +11,9 @@
   height: 60px;
   border-radius: 50%;
 }
-
+.suhlasim {
+  font-size: 1rem;
+}
 .spinner::before,
 .spinner:after {
   content: "";
@@ -39,21 +41,27 @@
   }
 }
 .linear-wipe {
-  background: linear-gradient(-45deg, #ffffff, #d12e2e);
-	background-size: 300%;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 900;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: animated_text 5s ease-in-out infinite;
-	-moz-animation: animated_text 5s ease-in-out infinite;
-	-webkit-animation: animated_text 5s ease-in-out infinite;
-
+  background: linear-gradient(-45deg, #ffffff, #a4ad5d);
+  background-size: 300%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 5s ease-in-out infinite;
+  -moz-animation: animated_text 5s ease-in-out infinite;
+  -webkit-animation: animated_text 5s ease-in-out infinite;
+  font-size: 1.5rem;
 }
 @keyframes animated_text {
-  0% { background-position: 0px 10%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0px 10%; }
+  0% {
+    background-position: 0px 10%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0px 10%;
+  }
 }
 .pullleft {
   margin-top: 0.3em;
@@ -216,7 +224,9 @@ form > .section-name {
   margin-bottom: 0.2em;
   cursor: pointer;
 }
-input[type="text"],input[type="tel"],input[type="email"] {
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
   border-radius: 0.5em;
   height: 2.8em;
   padding: 8px 10px;
@@ -391,13 +401,13 @@ button:active {
   transform: scaleX(1) skewX(35deg);
 }
 @media screen and (max-width: 430px) {
-.prechodne-bydlisko-field-suhlas-error {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  white-space: pre;
-}
+  .prechodne-bydlisko-field-suhlas-error {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    white-space: pre;
+  }
 }
 @media screen and (min-width: 530px) {
   .container-form {
@@ -493,10 +503,10 @@ button:active {
   .info2 {
     width: 35em;
   }
-  .rozdel{
+  .rozdel {
     margin: 0 1em;
   }
-  .personal-data-field{
+  .personal-data-field {
     width: 18em;
   }
 }

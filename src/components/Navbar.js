@@ -92,8 +92,8 @@ function Navbar() {
         </div>
 
       </nav>
-      <div className="novinka" onClick={()=>navigate("/predanieBytu")}>
-        Chcete predať byt? Odkúpime ho od Vás! Pre viac informácií klinite sem.
+      <div className="novinka" >
+      Upozornenie! Pôžičku nevieme schváliť, ak máte exekúciu alebo ste po osobnom bankrote.
       </div>
     </>
   );

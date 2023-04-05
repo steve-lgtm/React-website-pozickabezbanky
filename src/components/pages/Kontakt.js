@@ -8,8 +8,9 @@ const Kontakt = () => {
       <div className="contact-number">
         <h1>Telefonné číslo:</h1>
         <p>0940 838 058</p>
+        <a className="wau" href="tel:+421-940-838-058" data-tracking-element-type="3" jslog="56037; track:impression,click" itemprop="telephone" dir="ltr">Zavolať</a>
         <h1>E-mail:</h1>
-        <p>pozickabezbanky@gmail.com</p>
+        <a href="mailto:pozickabezbanky@gmail.com">pozickabezbanky@gmail.com</a>
       </div>
       <div className="contact-number">
         <h1>Adresa:</h1>
