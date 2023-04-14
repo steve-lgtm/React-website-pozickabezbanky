@@ -40,10 +40,7 @@ function HeroSection() {
         vašom účte už do 24h od schválenia pôžičky. Nájdeme riešenie aj tam, kde banka už nemôže.
 
       </div>
-      <div className="viac-info">
 
-      Pôžička až do 25 000 €.
-</div>
       <div className="viac-info poplatky">
       <div className="input-file-field-text-upload">
       <div className="linear-wipe">
