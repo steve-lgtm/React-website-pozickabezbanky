@@ -1,0 +1,45 @@
+.cookiebanner-container{
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(128, 128, 128, 0.95);
+    width: 100%;
+    bottom:0;
+    left: 0;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+    padding: 1em;
+    color: rgb(254, 214, 165);
+
+}
+.cookiebanner-container-button.Buttoncookie{
+    font-size: 0.5rem;
+    height: 3em;
+    padding: 0;
+    color: aliceblue;
+    border-color: aliceblue;
+}
+.cookiebanner-container-title{
+    text-align: center;
+}
+@media screen and (max-width: 400px) {
+    .cookiebanner-container{
+        position: fixed;
+        z-index: 1000;
+        background-color: rgba(128, 128, 128, 0.95);
+        width: 100%;
+        bottom:0;
+        left: 0;
+        display: flex;
+        gap: 1em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.6rem;
+        padding: 1em;
+        color: rgb(254, 214, 165);
+
+    }
+}

@@ -11,12 +11,14 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import Reality from './components/pages/Reality';
 import DakujemeReality from './components/pages/DakujemeReality'
+import CookieBanner from "./components/CookieBanner";
 
 
 library.add(fas);
 
 function App() {
-  return (
+  return (<>
+  <CookieBanner/>
     <Router>
       <Navbar />
       <Routes>
@@ -29,6 +31,7 @@ function App() {
         <Route path="/predanieBytu" element={<Reality />} />
       </Routes>
     </Router>
+    </>
   )
 }
 
