@@ -81,7 +81,7 @@ const style3 = {
 export default function Ziadost() {
   const [mounthsuma, setMounthsuma] = useState(95.48);
   const scriptUrl =
-    "https://script.google.com/macros/s/AKfycby31Mt8Z93d6cI_13KX_3GlD5qYcUgVTvsXNVf1t0se2J5Z2PhjdGWTmjfYGAyWZU4/exec";
+    "https://script.google.com/macros/s/AKfycbxtMCB4nPxD4rebH0pdasf9NyTSTW0Z_KP-axFZd7ADuZBcDT-Oeaqw6MZ6RxTUTw/exec";
   const [loading, setLoading] = useState(false);
   const [isValidate, setIsValidate] = useState(false);
   const [suhlasOU, setSuhlasOU] = useState(false);
@@ -113,6 +113,7 @@ export default function Ziadost() {
       tentoMesiac: "",
       prechádzajúciMesiac: "",
       predPrechádzajúciMesiac: "",
+      prijemNaUcet:"",
       IBAN: "",
       isfinalErrorsEmpty: "",
       rodnéČíslo: "",
@@ -184,6 +185,9 @@ export default function Ziadost() {
 
       if (!values.zamestnanie) {
         errors.zamestnanie = "Vyberte jednu z možností!";
+      }
+      if (!values.prijemNaUcet) {
+        errors.prijemNaUcet = "Vyberte jednu z možností!";
       }
       if (!values.rodinnýstav) {
         errors.rodinnýstav = "Vyberte jednu z možností!";
@@ -453,7 +457,7 @@ const onTargetClick = () => {
     { value: "Najomné bývanie", label: "Najomné bývanie" },
     { value: "Iné", label: "Iné" },
   ];
-  const optionsPríjemNaÚčet = [
+  const optionsPrijemNaUcet = [
     { value: "Áno", label: "Áno" },
     { value: "Nie", label: "Nie" },
   ];
@@ -1084,6 +1088,29 @@ const onTargetClick = () => {
               {formik.errors.predPrechádzajúciMesiac &&
               formik.touched.predPrechádzajúciMesiac ? (
                 <div>{formik.errors.predPrechádzajúciMesiac}</div>
+              ) : null}
+            </div>
+          </div>
+          <div className="personal-data-field">
+            <label htmlFor="prijemNaUcet">
+              Dostávate príjem (výplata, dôchodok) na Váš osobný bankový účet?
+            </label>
+            <Select
+              styles={styles}
+              options={optionsPrijemNaUcet}
+              placeholder=""
+              name="prijemNaUcet"
+              id="prijemNaUcet"
+              onChange={(e) => {
+                formik.setFieldValue("prijemNaUcet", e.value);
+                formik.setFieldTouched("prijemNaUcet", false);
+              }}
+              isSearchable={false}
+            />
+            <div className="errors">
+              {formik.errors.prijemNaUcet &&
+              formik.touched.prijemNaUcet ? (
+                <div>{formik.errors.prijemNaUcet}</div>
               ) : null}
             </div>
           </div>
