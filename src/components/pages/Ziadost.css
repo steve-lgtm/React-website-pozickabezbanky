@@ -68,6 +68,7 @@
   margin-bottom: 0.3em;
   float: left;
 }
+
 .pullright {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
@@ -408,6 +409,8 @@ button:active {
     justify-content: center;
     white-space: pre;
   }
+
+
 }
 @media screen and (min-width: 530px) {
   .container-form {
@@ -451,7 +454,15 @@ button:active {
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 730px) {
+  .modal-bankrot{
+    width: 100%;
+    padding: 0;
+    }
+}
+
 @media screen and (min-width: 730px) {
+
   .flex-files-container {
     display: flex;
     flex-direction: row;

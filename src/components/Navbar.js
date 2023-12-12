@@ -63,16 +63,6 @@ function Navbar() {
                 Kontakt
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                to="/predanieBytu"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Predať byt
-              </Link>
-            </li>
-
             <li>
               <Link
                 to="/ziadost"

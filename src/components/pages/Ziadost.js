@@ -12,6 +12,9 @@ import Modal from "@mui/material/Modal";
 import * as React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
+import Fade from '@mui/material/Fade';
+import Backdrop from '@mui/material/Backdrop';
+
 
 
 function PMT(ir, np, pv, fv, type) {
@@ -86,6 +89,7 @@ export default function Ziadost() {
   const [isValidate, setIsValidate] = useState(false);
   const [suhlasOU, setSuhlasOU] = useState(false);
   const navigate = useNavigate();
+  const [modalBankrot, setModalBankrot] = useState(true)
 
   const [prechodneByvanie, setPrechodneByvanie] = useState(false);
 
@@ -410,6 +414,19 @@ const onTargetClick = () => {
       formik.setFieldValue("file234", 2);
     }
   };
+  const modalBankrotStyle = {
+    display:'flex',
+    flexDirection:'column' ,
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '500',
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
 
   // Select options for input
 
@@ -568,6 +585,40 @@ const onTargetClick = () => {
   };
   return (
     <>
+        <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={modalBankrot}
+        onClose={handleClose}
+        closeAfterTransition
+        slots={{ backdrop: Backdrop }}
+        slotProps={{
+          backdrop: {
+            timeout: 500,
+          },
+        }}
+      >
+        <Fade in={modalBankrot}>
+          <Box sx={modalBankrotStyle}  className='modal-bankrot'>
+          <Box sx={style2}>
+              <div className="name-modal"></div>
+              <FontAwesomeIcon
+                onClick={()=>{setModalBankrot(false)}}
+                className="icona"
+                icon="fa-solid fa-x"
+              />
+            </Box>
+            <Typography id="transition-modal-title" style={{textAlign:"center"}} variant="h6" component="h2">
+            Upozornenie!
+            <Typography id="transition-modal-description" style={{textAlign:'center',marginBottom:'2em'}} sx={{ mt: 2 }}>
+            Pôžičku nevieme schváliť, ak máte exekúciu alebo ste po osobnom bankrote.            </Typography>
+                        </Typography>
+                        <button type="submit" onClick={()=>{setModalBankrot(false)}} className="button">
+           Nemám osobný bankrot
+          </button>
+          </Box>
+        </Fade>
+      </Modal>
       <h1 className="header-form">
         Vyplňte formulár pre nezáväznu žiadosť o pôžičku.
       </h1>
